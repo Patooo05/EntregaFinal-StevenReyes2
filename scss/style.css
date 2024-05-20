@@ -27,7 +27,8 @@ body .custom-modal {
 }
 body .custom-modal .custom-img {
   max-height: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -165,7 +166,8 @@ main .card.custom-card:hover {
 }
 main .card.custom-card .novedades--img {
   max-height: 500px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 main .card.custom-card .card-body {
@@ -333,7 +335,8 @@ main .text-light {
 .img-header-prod {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .titulos {
@@ -377,7 +380,7 @@ main .text-light {
 /*Formulario regristrarse*/
 .container {
   padding: 2rem;
-  background-color: #0f0f0f;
+  background-color: #343a40;
   border-radius: 10px;
   color: #ffffff;
 }
@@ -400,8 +403,6 @@ main .text-light {
   width: 100%;
   padding: 0.75rem;
   font-size: 1.25rem;
-  display: block;
-  margin: 0 auto;
 }
 
 .btn-block a {
@@ -413,14 +414,8 @@ main .text-light {
   margin-bottom: 2rem;
 }
 
-.form-control {
-  width: 80%;
-}
-
-button[type=submit] {
-  display: block;
-  width: 50%;
-  margin: 10px auto;
+.nvmg {
+  max-width: 500px;
 }
 
 header .navbar {
@@ -465,6 +460,4 @@ header .nav__sombra {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
