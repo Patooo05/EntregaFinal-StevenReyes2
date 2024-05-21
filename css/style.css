@@ -2,6 +2,12 @@
   background-color: black;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body .nvmg {
   border-right: #fff;
   box-shadow: 0px 0px 10px rgba(131, 2, 2, 0.9);
@@ -97,6 +103,7 @@ footer .saborea2 {
 /*Fuentes*/
 /*titulos*/
 main {
+  /*Main Index relleno*/
   /* Main Index Novedades */
   /* Cards Novedades */
   /* Media queries */
@@ -132,6 +139,14 @@ main .caja-novedades {
   margin-bottom: 3rem;
   border-radius: 30px;
   padding: 20px;
+}
+main .caja-novedades .imgrelleno {
+  width: 25%;
+}
+main .caja-novedades .horizontal-relleno-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main .caja-novedades .titulo__novedades {
   font-family: "Macondo", cursive;
@@ -377,7 +392,7 @@ main .text-light {
 /*Formulario regristrarse*/
 .container {
   padding: 2rem;
-  background-color: #0f0f0f;
+  background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
 }
@@ -423,6 +438,64 @@ button[type=submit] {
   margin: 10px auto;
 }
 
+.list-group-item {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.list-group-item:not(:last-child) {
+  border-bottom: none;
+}
+
+.lista-item:hover {
+  background-color: #444;
+}
+
+/*carrito*/
+.card-carrito {
+  background-color: #5f0f0f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(51, 50, 50, 0.5);
+}
+
+.card-body-carrito {
+  background-color: #1a1a1a;
+}
+
+.list-group-item-carrito {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #444;
+}
+
+.btn {
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+@media (min-width: 576px) {
+  .btn {
+    width: 100%;
+  }
+}
 header .navbar {
   background-image: linear-gradient(to bottom, #222222, rgba(0, 0, 0, 0.8470588235), #1f1e1e);
   opacity: 0.8;
@@ -459,12 +532,18 @@ header .nav__sombra {
   margin: 0 auto;
   display: flex;
 }
+header .usuario-nav {
+  padding-right: 1rem;
+}
+header .arreglo-letras {
+  font-size: 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
+header .width-ico {
+  width: 2.2em;
+}
 
 /*Cierra header*/
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 /*# sourceMappingURL=style.css.map */

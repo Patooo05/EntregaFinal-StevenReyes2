@@ -26,7 +26,9 @@ main {
       margin-bottom: 15rem;
       font-size: 3.8rem;
     }
-  
+  /*Main Index relleno*/
+       
+     
     /* Main Index Novedades */
     .caja-novedades {
       width: 90%;
@@ -35,7 +37,14 @@ main {
       margin-bottom: 3rem;
       border-radius: 30px;
       padding: 20px;
-      
+      .imgrelleno{
+        width:25%;
+}
+      .horizontal-relleno-index {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       .titulo__novedades {
         font-family: $fuenteTitulos;
         font-weight: 700;
@@ -320,7 +329,7 @@ main {
   /*Formulario regristrarse*/
   .container {
     padding: 2rem;
-    background-color: #0f0f0f;
+    background-color: #000000;
     border-radius: 10px;
     color: #ffffff;
 }
@@ -366,3 +375,60 @@ button[type="submit"] {
   margin: 10px auto;
 }
 
+.list-group-item {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+.list-group-item:not(:last-child) {
+  border-bottom: none;
+}
+.lista-item:hover {
+  background-color: #444;
+}
+
+
+
+
+/*carrito*/
+  .card-carrito {
+  background-color: #5f0f0f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(51, 50, 50, 0.5);
+  
+}
+.card-body-carrito {
+  background-color: #1a1a1a;
+ 
+}
+.list-group-item-carrito{
+  background-color: #333;
+  ;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow:  4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+.list-group-item:hover {
+  background-color: #444;
+}
+.btn {
+  border-radius: 8px;
+  margin: 5px 0;
+}
+.btn:hover {
+  background-color: #555;
+}
+
+@media (min-width: 576px) {
+  .btn {
+      width: 100%;
+  }
+}
