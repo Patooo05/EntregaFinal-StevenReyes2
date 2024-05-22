@@ -541,7 +541,13 @@ header .arreglo-letras {
   cursor: pointer;
 }
 header .width-ico {
-  width: 2.2em;
+  width: 2.1em;
+}
+header .marginnav {
+  margin-right: 10rem;
+}
+header .navbar-toggler-icon {
+  color: #ffffff;
 }
 
 /*Cierra header*/
