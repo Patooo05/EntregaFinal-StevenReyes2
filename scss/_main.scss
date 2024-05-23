@@ -26,273 +26,264 @@ body {
 
 
 /*INDEX*/
-    h1 {
-      font-size: 50px;
-      font-family: "Adamina", serif;
-      font-weight: 700;
-      margin-top: 7rem;
-      text-align: center;
-      font-style: bold;
-      color: #d1d1d1;
-      
-      .one-color {
-        color: #5e0d05;
-        animation: animate__bounceInLeft;
-      }
-    }
-  
-    h2 {
-      font-family: "Macondo", cursive;
-      color: #d1d1d1;
-      font-style: bold;
-      text-align: center;
-    }
-  
-    .texto-carrusel {
-      display: block;
-      margin-bottom: 15rem;
-      font-size: 3.8rem;
-    }
-
-
-
-
-    /*imagenes de relleno*/
-    .parent-container-rell {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 5rem;
-     
-    }
-    .image-container-rell {
-      display: flex;
-      width: 50%;
-      max-width: 600px;
-      justify-content: center;
-      position: relative;
-    }
-    .image-container-rell img {
-      width: 48%;
-      display: block;
-      transition: opacity 1.7s ease;
-    }
-    .image-container-rell img.top-image-rell {
-    
-      opacity: 0.8;
-    }
-    .image-container-rell img.bottom-image-rell {
-      opacity: 0.1;
-    }
-    .image-container-rell:hover .top-image-rell {
-      opacity: 0.1;
-    }
-    .image-container-rell:hover .bottom-image-rell {
-      opacity: 0.8;
-    }
-     
-    /* Main Index Novedades */
-    .caja-novedades {
-      width: 90%;
-      border-right: #631616;
-      margin: 0 auto;
-      margin-bottom: 3rem;
-      border-radius: 30px;
-      padding: 20px;
-        /*Main Index relleno*/
-      .imgrelleno{
-        width:25%;
-        border-radius: 0.5rem;
+h1 {
+  font-size: 50px;
+  font-family: "Adamina", serif;
+  font-weight: 700;
+  margin-top: 7rem;
+  text-align: center;
+  font-style: bold;
+  color: #d1d1d1;
 }
-      .imgrellenoFX {
-                  transition: transform 0.3s ease; 
-      }
-      .imgrellenoFX:hover {
-        transform: scale(1.1);
-        
-}
-      .horizontal-relleno-index {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
 
-.imganen-bg{
-  
+.one-color {
+  color: #5e0d05;
+  animation: animate__bounceInLeft;
+}
+
+h2 {
+  font-family: "Macondo", cursive;
+  color: #d1d1d1;
+  font-style: bold;
+  text-align: center;
+}
+
+.texto-carrusel {
+  display: block;
+  margin-bottom: 15rem;
+  font-size: 3.8rem;
+}
+
+/*imagenes de relleno*/
+.parent-container-rell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.image-container-rell {
+  display: flex;
+  width: 50%;
+  max-width: 600px;
+  justify-content: center;
+  position: relative;
+}
+
+.image-container-rell img {
+  width: 48%;
+  display: block;
+  transition: opacity 1.7s ease;
+}
+
+.image-container-rell img.top-image-rell {
+  opacity: 0.8;
+}
+
+.image-container-rell img.bottom-image-rell {
+  opacity: 0.1;
+}
+
+.image-container-rell:hover .top-image-rell {
+  opacity: 0.1;
+}
+
+.image-container-rell:hover .bottom-image-rell {
+  opacity: 0.8;
+}
+
+/* Main Index Novedades */
+.caja-novedades {
+  width: 90%;
+  border-right: #631616;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.imgrelleno {
+  width: 25%;
+  border-radius: 0.5rem;
+}
+
+.imgrellenoFX {
+  transition: transform 0.3s ease; 
+}
+
+.imgrellenoFX:hover {
+  transform: scale(1.1);
+}
+
+.horizontal-relleno-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imganen-bg {
   background-image: url('./img/rell.jpg');
   background-size: cover;
   background-position: center;
   padding: 50px 0;
 }
 
-      .titulo__novedades {
-        font-family: $fuenteTitulos;
-        font-weight: 700;
-        font-style: bold;
-        font-size: 3rem;
-        margin-top: 0;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-  
-      .nvmg {
-        border-right: #fff;
-        box-shadow: 0px 0px 10px #b12424e6;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        overflow: hidden;
-      }
-    }
-  
+.titulo__novedades {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.nvmg {
+  border-right: #fff;
+  box-shadow: 0px 0px 10px #b12424e6;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow: hidden;
+}
 
-  
-    /* Cards Novedades */
-    .card.custom-card {
-      background-color: #2b2b2b;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(228, 222, 222, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-     
-  
-      &:hover {
-        transform: translateY(-20px);
-        box-shadow: 0 8px 16px rgba(255, 253, 253, 0.3);
-      }
-  
-    
-  
-      .card-body {
-        padding: 4px;
-  
-        .text-light {
-          color: #fff;
-        }
-  
-        img {
-          border-radius: 10px;
-        }
-      }
-    }
-  
-    .w-50 {
-      width: 50%;
-    }
-  
-    .text-center {
-      text-align: center;
-    }
-  
-    .text-light {
-      color: #f8f9fa;
-    }
-  
-    /* Media queries */
-    @media screen and (max-width: 1024px) {
-      .img-main2 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  
-    @media screen and (max-width: 768px) {
-      .img-main2 {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 75%;
-        margin: 0 auto;
-      }
-    }
- 
- 
-  /* Tarjetas Horarios y dirección*/
+/* Cards Novedades */
+.card.custom-card {
+  background-color: #2b2b2b;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(228, 222, 222, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.custom-card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 16px rgba(255, 253, 253, 0.3);
+}
+
+.card .card-body {
+  padding: 4px;
+}
+
+.card .card-body .text-light {
+  color: #fff;
+}
+
+.card .card-body img {
+  border-radius: 10px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: #f8f9fa;
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+  .img-main2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-main2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 75%;
+      margin: 0 auto;
+  }
+}
+
+/* Tarjetas Horarios y dirección */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item {
+  flex: 1;
+  max-width: 500px; 
+  padding: 70px; 
+  background-color: #000000; 
+  text-align: center;
+  cursor: pointer;
+}
+
+.flex-item-title {
+  text-align: center;
+  font-size: 24px; 
+  color: #bebaba;
+  letter-spacing: 1px; 
+}
+
+.flex-item-content {
+  font-size: 20px; 
+  font-family: 'Courier New', ;
+  color: #d4d3d3; 
+  opacity: 0.7;
+}
+
+.flex-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0px 4px 8px rgba(173, 36, 36, 0.2);
+}
+
+.flex-item:not(:last-child) {
+  border-right: 1px solid #ffffff; 
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.flex-item {
+  animation: fadeInUp 0.5s ease-out; 
+}
+
+@media screen and (max-width: 768px) {
   .flex-container {
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-   
-  }
-  
-  .flex-item {
-    flex: 1;
-    max-width: 500px; 
-; 
-    padding: 70px; 
-    background-color: #000000; 
-    text-align: center;
-    cursor: pointer;
-    
-    &-title {
-      text-align: center;
-      font-size: 24px; 
-      color: #bebaba;
-      letter-spacing: 1px; 
-    }
-    
-    &-content {
-      font-size: 20px; 
-      font-family: 'Courier New', ;
-      color: #d4d3d3; 
-      opacity: 0.7;
-    }
-  
-    &:hover {
-      transform: translateY(-5px); 
-      box-shadow: 0px 4px 8px rgba(173, 36, 36, 0.2);
-    }
-  
-    &:not(:last-child) {
-      border-right: 1px solid #ffffff; 
-    }
-  
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(100px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    animation: alternate 0.5s ease-out; 
-  }
-  
-  @media screen and (max-width: 768px) {
-    .flex-container {
       flex-direction: column; 
       align-items: center; 
-    }
   }
-  
-    /* Social Icons */
-    .social-icons-container {
-      text-align: center;
-      margin-top: 2rem;
-     
-    }
-    
-    .social-icons {
-      list-style: none;
-      padding: 0;
-      display: inline-block;
-     
-    
-      li {
-        display: inline-block; 
-        margin-right: 10px;
-      }
-    
-      img {
-        width: 40px;
-        cursor: pointer;
-      }
-    }
-  
+}
+
+/* Social Icons */
+.social-icons-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.social-icons li {
+  display: inline-block; 
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 40px;
+  cursor: pointer;
+}
+
   /* Main pages/Nosotros */
   .conteniner-p {
     display: flex;
