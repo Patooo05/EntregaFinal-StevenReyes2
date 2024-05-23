@@ -2,10 +2,30 @@ main {
  .padding-nav-main{
   padding-top:auto ;
 }
+
+.padding2{
+  padding-top: 4.58rem;
+}
   .cursorpointer{
     cursor: pointer;
   }
- 
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+
+}
+.padding{
+  padding-top :20rem;
+}
+
+
+/*INDEX*/
     h1 {
       font-size: 50px;
       font-family: "Adamina", serif;
@@ -35,6 +55,41 @@ main {
     }
 
 
+
+
+    /*imagenes de relleno*/
+    .parent-container-rell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5rem;
+     
+    }
+    .image-container-rell {
+      display: flex;
+      width: 50%;
+      max-width: 600px;
+      justify-content: center;
+      position: relative;
+    }
+    .image-container-rell img {
+      width: 48%;
+      display: block;
+      transition: opacity 1.7s ease;
+    }
+    .image-container-rell img.top-image-rell {
+    
+      opacity: 0.8;
+    }
+    .image-container-rell img.bottom-image-rell {
+      opacity: 0.1;
+    }
+    .image-container-rell:hover .top-image-rell {
+      opacity: 0.1;
+    }
+    .image-container-rell:hover .bottom-image-rell {
+      opacity: 0.8;
+    }
      
     /* Main Index Novedades */
     .caja-novedades {
@@ -61,6 +116,15 @@ main {
           align-items: center;
           justify-content: center;
         }
+
+.imganen-bg{
+  
+  background-image: url('./img/rell.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
       .titulo__novedades {
         font-family: $fuenteTitulos;
         font-weight: 700;
@@ -80,12 +144,8 @@ main {
       }
     }
   
-    .padding{
-      padding-top: 6.3rem;
-    }
-    .padding2{
-      padding-top:4.89rem;
-    }
+
+
   
     /* Cards Novedades */
     .card.custom-card {
@@ -101,11 +161,7 @@ main {
         box-shadow: 0 8px 16px rgba(255, 253, 253, 0.3);
       }
   
-      .novedades--img {
-        max-height: 500px;
-        object-fit: cover;
-        width: 100%;
-      }
+    
   
       .card-body {
         padding: 4px;
@@ -150,10 +206,9 @@ main {
     }
  
  
-  /* Tarjeta Horarios */
+  /* Tarjetas Horarios y dirección*/
   .flex-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +219,7 @@ main {
   .flex-item {
     flex: 1;
     max-width: 500px; 
-    margin: 40px; 
+; 
     padding: 70px; 
     background-color: #000000; 
     text-align: center;

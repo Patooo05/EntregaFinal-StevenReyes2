@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Burger ONE, la mejor cadena de Hamburguesas de Uruguay y del Mundo. Conocé nuestras hamburguesas, promociones y más.¡Pedí online,">
-    <meta name="keywords" content="hamburgesas, burger, mejores, florida, Uruguay">
+    <meta name="keywords" content="hamburguesas, burger, mejores, florida, Uruguay">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -26,9 +26,8 @@
 
 
 <body class="background">
-          
   <header class="background">
-    <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top py-4">
+    <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top  mx-auto padingnav">
         <div class="container-fluid mx-auto">
           <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,8 +51,8 @@
                         <a class="nav-link active text-light" href="./pages/nosotros.html">NOSOTROS</a>
                     </li>
                     <!--Elementos solo mobile-->
-                    <li class="nav-item text-center d-block d-lg-none marginr">
-                      <a class="nav-link  text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                    <li class="nav-item text-center d-block d-lg-none arreglo-letras marginr">
+                      <a class="nav-link  text-light arreglo-letras cursorpointer " data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                   </li>
                   <li class="nav-item text-center d-block d-lg-none marginr">
                       <a class="nav-link text-light arreglo-letras" href="./pages/registrarse.html">Registrarse</a>
@@ -66,9 +65,9 @@
                   </li>          
                 </ul>
                   <!--Elementos mobile-->
-                <ul class="navbar-nav d-flex align-items-center justify-content-between ">
-                  <li class="nav-item d-none d-lg-block">
-                      <a class="nav-link text-light arreglo-letras fs-6" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                <ul class="navbar-nav d-flex align-items-center justify-content-between cursorpointer  arreglo-letras">
+                  <li class="nav-item d-none d-lg-block arreglo-letras ">
+                      <a class="nav-link text-light arreglo-letras fs-6 cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                   </li>
                   <li class="nav-item d-none d-lg-block">
                       <a class="nav-link text-light arreglo-letras fs-6" href="./pages/registrarse.html">Registrarse</a>
@@ -86,48 +85,46 @@
     </nav>
 
 
-<!-- Modal -->
-<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-  <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
-    <div class="modal-content bg-dark text-white p-4">
-      <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
-        <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+        <!-- Modal -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+          <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+            <div class="modal-content bg-dark text-white ">
+              <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
+                <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                  </div>
+                  <div class="form-check mt-4">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Recuérdame</label>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer mt-3 pt-3 border-top border-secondary">
+                <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="Contraseña">
-          </div>
-          <div class="form-check mt-4">
-            <input type="checkbox" class="form-check-input" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">Recuérdame</label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer mt-3 pt-3 border-top border-secondary">
-        <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
+        </div>
 </header>
 <br>
-<main class="padding">
- 
-  <div id="carouselExampleCaptions" class="carousel slide padding ">
-       <div class="carousel-indicators">
+<main class=" pt-5">
+  <div id="carouselExampleCaptions" class="carousel slide ">
+       <div class="carousel-indicators pt-3">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner pt-5">
             <div class="carousel-item active">
                <img src="./img/Banner03.jpg" class="d-block w-100 mx-auto" alt="Imagen-carrusel" > 
                 <div class="carousel-caption d-none d-md-block container-txt-carrusel ">
@@ -138,13 +135,13 @@
                     <h1 class=" animate__animated animate__zoomInDown interlineado-subrayado"  style="animation-duration: 1.1s;">Burger <span class="one-color ">ONE</span></h1>
                     <br>
                     <h2 class="animate__animated animate__zoomInDown interlineado-subrayado"  style="animation-duration: 0.8s">¡Saborea la delicia en cada bocado!</h2>
-                </div>  
+                  </div>  
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="./img/banner02.jpg" class="d-block w-100 mx-auto" style="max-height: 780px;" alt="Imagen-carrusel"> 
                 <div class="carousel-caption d-none d-md-block">
-               <h5 class="texto-carrusel m-3 animate__animated animate__backInLeft animation-duration,1.1s"> CHEDDAR ?</h5>
+                   <h5 class="texto-carrusel m-3 animate__animated animate__backInLeft animation-duration,1.1s"> CHEDDAR ?</h5>
                   <p class=" texto-carrusel-p animate__animated animate__backInLeft">LLego el dia que tanto esperabas, o no sabias, pero igualmente estas aquí...</p>
                 </div>
             </div>
@@ -154,82 +151,75 @@
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button"     data-bs-target="#carouselExampleCaptions"   data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-  </div>
-
-</div> 
-<div class="social-icons-container ">
-  <ul class="social-icons ">
-    <li><a href="https://www.instagram.com/"><img class="w-50 fixed-button" src="./img/ic-ig-tras.png" alt="icono instagram"></a></li>
-    <li><a href="https://www.facebook.com"><img  class="w-50 fixed-button" src="./img/ic-nwe-face-tras.png" alt="icono facebook"></a></li>
-    <li><a href="https://www.whatsapp.com"><img  class="w-50 fixed-button" src="./img/ic-new-what-trans.png" alt="icono whatsapp"></a></li>
-  </ul>
-</div>
+        </div>
+  </div> 
+          <div class="social-icons-container ">
+            <ul class="social-icons ">
+              <li><a href="https://www.instagram.com/"><img class="w-50 fixed-button img-fluid" src="./img/ic-ig-tras.png" alt="icono instagram"></a></li>
+              <li><a href="https://www.facebook.com"><img  class="w-50 fixed-button img-fluid" src="./img/ic-nwe-face-tras.png" alt="icono facebook"></a></li>
+              <li><a href="https://www.whatsapp.com"><img  class="w-50 fixed-button img-fluid" src="./img/ic-new-what-trans.png" alt="icono whatsapp"></a></li>
+            </ul>
+          </div>
 <hr>
-<div class="mx-auto w-50">
-<h6 class="nosotros-p text-center h6textos">" Si alguna vez has soñado con probar una hamburguesa que te haga sentir como si hubieras llegado al cielo de la gastronomía, este establecimiento es el lugar donde tus sueños se hacen realidad. Dirigido por un equipo de jóvenes pero no inexpertos argentinos, este santuario de la hamburguesa gourmet en Palma de Mallorca es una experiencia culinaria que no te puedes perder."</h6>
-</div>
+          <div class="mx-auto w-50">
+                <h6 class="nosotros-p text-center h6textos">" Si alguna vez has soñado con probar una hamburguesa que te haga sentir como si hubieras llegado al cielo de la gastronomía, este establecimiento es el lugar donde tus sueños se hacen realidad. Dirigido por un equipo de jóvenes pero no inexpertos argentinos, este santuario de la hamburguesa gourmet en Palma de Mallorca es una experiencia culinaria que no te puedes perder."</h6>
+          </div>
 
 
 <article class="caja-novedades mx-auto">
- 
+    <section class="pt-5  ">
+      <div class=" w-100 horizontal-relleno-index py-5">
+        <img class="imgrelleno imgrellenoFX" src="./img/relleno01.jpg" alt="relleno imagen">
+        <img class="imgrelleno" src="./img/action.jpg" alt="imagen action">
+        <img class="imgrelleno imgrellenoFX" src="./img/relleno02.jpg" alt="relleno imagen">
+      </div>
+    </section>
+          <br>
+     <h3 class="titulo__novedades display-4 font-weight-bold text-light text-center">Novedades</h3>
 
-<section class="py-5  ">
-  <div class=" w-100 horizontal-relleno-index py-5">
- 
-    <img class="imgrelleno imgrellenoFX" src="./img/relleno01.jpg" alt="relleno imagen">
-    <img class="imgrelleno" src="./img/action.jpg" alt="imagen action">
-    <img class="imgrelleno imgrellenoFX" src="./img/relleno02.jpg" alt="relleno imagen">
-  
-</div>
-
-</section>
-
-  
-  <h3 class="titulo__novedades display-4 font-weight-bold text-light text-center">Novedades</h3>
-
-  <section class="my-5">
-    <div class="container">
-      <div class="row " >
-        <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard1">
-            <img class="novedades--img img-fluid" src="./img/novGRINGAS-min-1.png" alt="Novedades de línea vegetal">
-            <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
-              <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
-              <div>
-                <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
+    <section class=" imganen-bg">
+      <div class="container">
+        <div class="row " >
+          <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
+            <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard1">
+              <img class="novedades--img img-fluid" src="./img/novGRINGAS-min-1.png" alt="Novedades de línea vegetal">
+              <div class="card-body text-center">
+                <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
+                <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
+                <div>
+                  <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard2">
-            <img class="novedades--img img-fluid" src="./img/novCHINGA-min.png" alt="Novedades de línea vegetal">
-            <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
-              <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
-              <div>
-                <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
+          <div class="col-sm-12 col-md-6 col-lg-3 mb-3 container-fluid">
+            <div class="card custom-card mx-auto cursorpointer conta" data-bs-toggle="modal" data-bs-target="#modalCard2">
+              <img class="novedades--img img-fluid" src="./img/novCHINGA-min.png" alt="Novedades de línea vegetal">
+              <div class="card-body text-center">
+                <p class="text-light m-3 text-fluid">Adquirirlos únicamente en nuestros locales.</p>
+                <p class="text-light m-3 text-fluid">Te obsequiamos un 2 x 1 con este QR</p>
+                <div>
+                  <img class="w-50 mx-auto m-3 p-3 img-fluid" src="./img/scan_me_qr_code.jpg" alt="QR Code">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard3">
-            <img class="novedades--img img-fluid" src="./img/novNachos_Puta_Madre.jpg" alt="Novedades de línea vegetal">
-            <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
-              <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
-              <div>
-                <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
+          <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
+            <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard3">
+              <img class="novedades--img img-fluid" src="./img/novNachos_Puta_Madre.jpg" alt="Novedades de línea vegetal">
+              <div class="card-body text-center">
+                <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
+                <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
+                <div>
+                  <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
+                </div>
               </div>
             </div>
           </div>
-        </div>
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
           <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard4">
             <img class="novedades--img img-fluid" src="./img/novPADRISIMOS-min.png" alt="Novedades de línea vegetal">
@@ -244,7 +234,7 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <!-- Modal 1 -->
   <div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
@@ -329,8 +319,22 @@
       </div>
     </div>
   </div>
-  <br>
+
 </article>
+
+
+<div class="parent-container-rell">
+  <div class="image-container-rell align-items-center">
+    <img class="top-image-rell" src="./img/rell.jpg" alt="foto de hamburguesas">
+    <img class="bottom-image-rell" src="./img/rell1.jpg" alt="foto de hamburguesas">
+    <img class="top-image-rell" src="./img/rell.jpg" alt="foto de hamburguesas">
+    <img class="bottom-image-rell" src="./img/rell1.jpg" alt="foto de hamburguesas">
+    <img class="top-image-rell" src="./img/rell.jpg" alt="foto de hamburguesas">
+    <img class="bottom-image-rell" src="./img/rell1.jpg" alt="foto de hamburguesas">
+  </div>
+</div>
+
+
   <section class="flex-container">
     <div class="flex-item">
       <h6 class="flex-item-title">INFORMACIÓN</h6>
@@ -368,20 +372,14 @@
   </div>
 </main>
 <hr>
-
     <footer >
-   
-
         <section>
             <div class="footer00 text-fluid">
                 <div class="footer01 ">
                       <p class="burger__mini fs-3 "> Burger ONE </p>
-                      <p class="text-light burger__mini  fs-5">¡Saborea la delicia en cada bocado!</p>
-                                          
+                      <p class="text-light burger__mini  fs-5">¡Saborea la delicia en cada bocado!</p>                     
                 </div>
-                
-                <form action="#" >
-                      
+                <form action="#" >  
                     <div class="footer01">
                         <label class="text-light fs-6" for="mail">Recibi las mejores promociones:</label>
                         <input type="email" name="mail" placeholder="Tu Correo" required id="mail">
@@ -390,23 +388,19 @@
                 </form>
                 <hr>
                 <div class="footer02">
-                
                             <p class="text-light text-fluid fs-6">¿Te gusta esta Web?</p>
                             <p class="text-light text-fluid fs-6">¿Quieres tener tu proía Web?</p>
                             <input class="mx-auto bg-dark p-1 text-light" type="submit" name="Contactar"  value="Contactar">
-                </div>  
-                  
+                </div>                   
             </div>
         </section>
+  <p class="text-center  text-light m-3  ">&copy; 2024 Burger ONE. Todos los derechos reservados.</p>
   
-         <p class="text-center  text-light m-3  ">&copy; 2024 Burger ONE. Todos los derechos reservados.</p>
-  
-    </footer>
+</footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
   </html>
 

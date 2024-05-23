@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .background {
   background-color: black;
 }
@@ -123,10 +124,12 @@ footer .social-icons img {
 /*Fuentes*/
 /*titulos*/
 main {
+  /*INDEX*/
+  /*imagenes de relleno*/
   /* Main Index Novedades */
   /* Cards Novedades */
   /* Media queries */
-  /* Tarjeta Horarios */
+  /* Tarjetas Horarios y dirección*/
   /* Social Icons */
   /* Main pages/Nosotros */
   /* Main pages/Productos */
@@ -137,8 +140,22 @@ main {
 main .padding-nav-main {
   padding-top: auto;
 }
+main .padding2 {
+  padding-top: 4.58rem;
+}
 main .cursorpointer {
   cursor: pointer;
+}
+main body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+main .padding {
+  padding-top: 20rem;
 }
 main h1 {
   font-size: 50px;
@@ -164,6 +181,36 @@ main .texto-carrusel {
   margin-bottom: 15rem;
   font-size: 3.8rem;
 }
+main .parent-container-rell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+main .image-container-rell {
+  display: flex;
+  width: 50%;
+  max-width: 600px;
+  justify-content: center;
+  position: relative;
+}
+main .image-container-rell img {
+  width: 48%;
+  display: block;
+  transition: opacity 1.7s ease;
+}
+main .image-container-rell img.top-image-rell {
+  opacity: 0.8;
+}
+main .image-container-rell img.bottom-image-rell {
+  opacity: 0.1;
+}
+main .image-container-rell:hover .top-image-rell {
+  opacity: 0.1;
+}
+main .image-container-rell:hover .bottom-image-rell {
+  opacity: 0.8;
+}
 main .caja-novedades {
   width: 90%;
   border-right: #631616;
@@ -188,6 +235,12 @@ main .caja-novedades .horizontal-relleno-index {
   align-items: center;
   justify-content: center;
 }
+main .caja-novedades .imganen-bg {
+  background-image: url("./img/rell.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
 main .caja-novedades .titulo__novedades {
   font-family: "Macondo", cursive;
   font-weight: 700;
@@ -204,12 +257,6 @@ main .caja-novedades .nvmg {
   padding: 1.5rem;
   overflow: hidden;
 }
-main .padding {
-  padding-top: 6.3rem;
-}
-main .padding2 {
-  padding-top: 4.89rem;
-}
 main .card.custom-card {
   background-color: #2b2b2b;
   border-radius: 15px;
@@ -220,11 +267,6 @@ main .card.custom-card {
 main .card.custom-card:hover {
   transform: translateY(-20px);
   box-shadow: 0 8px 16px rgba(255, 253, 253, 0.3);
-}
-main .card.custom-card .novedades--img {
-  max-height: 500px;
-  object-fit: cover;
-  width: 100%;
 }
 main .card.custom-card .card-body {
   padding: 4px;
@@ -259,8 +301,6 @@ main .text-light {
   }
 }
 main .flex-container {
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +309,6 @@ main .flex-container {
 main .flex-item {
   flex: 1;
   max-width: 500px;
-  margin: 40px;
   padding: 70px;
   background-color: #000000;
   text-align: center;
@@ -546,6 +585,9 @@ main .btn-custom-carrito:hover .d-flex i {
 header {
   /* Arreglos nav-usuario */
 }
+header .padingnav {
+  padding: 1.37rem;
+}
 header .navbar {
   background-image: linear-gradient(to bottom, #222222, rgba(0, 0, 0, 0.8470588235), #1f1e1e);
   opacity: 0.8;
@@ -596,7 +638,7 @@ header .navbar-toggler-icon {
   color: #ffffff;
 }
 header .marginr {
-  margin-left: 7rem;
+  margin-left: 3.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

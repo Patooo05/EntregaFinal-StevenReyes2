@@ -24,7 +24,7 @@
 
 <body class="background" >
     <header class="background">
-        <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top py-4">
+        <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top padingnav">
             <div class="container-fluid mx-auto">
               <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@
     
     <!-- Modal -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100 ">
         <div class="modal-content bg-dark text-white p-4">
           <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
             <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
@@ -194,30 +194,7 @@
                                 </div>
 
                                 <!-- Producto 3 -->
-                                <div class="card mb-5 bg-dark">
-                                  <div class="card-body list-group-item m-3">
-                                      <div class="d-flex justify-content-between">
-                                        <div class="d-flex flex-row align-items-center m-3">
-                                            <div>
-                                                <img src="../img/b-Cabrona.jpg" class="img-fluid product-image" alt="Producto">
-                                            </div>
-                                            <div class="ms-3 text-light product-info">
-                                                <h5>Cabrona</h5>
-                                                <p class="small mb-0 text-light">REF</p>
-                                            </div>
-                                        </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">1</h5>
-                                                </div>
-                                                <div style="width: 80px;">
-                                                    <h5 class="mb-0 text-light">$380</h5>
-                                                </div>
-                                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                             
                          </div>
 <br>
                             <div class="col-lg-5 mx-auto pt-5">
@@ -229,23 +206,23 @@
                                         </div>
                                         <form class="mt-4">
                                             <div class="form-outline form-white mb-4">
-                                                <input type="text" id="typeName" class="form-control form-control-lg" size="17" placeholder="Nombre del titular" />
-                                                <label class="form-label" for="typeName">Nombre del titular</label>
+                                                <input type="text" id="typeName" class="form-control " size="17" placeholder="Nombre del titular" />
+                                                
                                             </div>
                                             <div class="form-outline form-white mb-4">
-                                                <input type="text" id="typeText" class="form-control form-control-lg" size="17" placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                                                <label class="form-label" for="typeText">Numero de la tarjeta</label>
+                                                <input type="text" id="typeText" class="form-control " size="17" placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                                               
                                             </div>
                                             <div class="row mb-4">
                                                 <div class="col-md-6">
                                                     <div class="form-outline form-white">
-                                                        <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YYYY" size="7" minlength="7" maxlength="7" />
-                                                        <label class="form-label" for="typeExp">Expiration</label>
+                                                        <input type="text" id="typeExp" class="form-control " placeholder="MM/YYYY" size="7" minlength="7" maxlength="7" />
+                                                        <label class="form-label" for="typeExp">F.V</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-outline form-white">
-                                                        <input type="password" id="typeText" class="form-control form-control-lg" placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                                        <input type="password" id="typeText" class="form-control " placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
                                                         <label class="form-label" for="typeText">Cvv</label>
                                                     </div>
                                                 </div>
