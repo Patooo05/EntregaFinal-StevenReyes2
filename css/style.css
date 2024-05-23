@@ -129,7 +129,7 @@ main {
   /* Main Index Novedades */
   /* Cards Novedades */
   /* Media queries */
-  /* Tarjetas Horarios y dirección*/
+  /* Tarjetas Horarios y dirección */
   /* Social Icons */
   /* Main pages/Nosotros */
   /* Main pages/Productos */
@@ -166,7 +166,7 @@ main h1 {
   font-style: bold;
   color: #d1d1d1;
 }
-main h1 .one-color {
+main .one-color {
   color: #5e0d05;
   animation: animate__bounceInLeft;
 }
@@ -218,31 +218,30 @@ main .caja-novedades {
   margin-bottom: 3rem;
   border-radius: 30px;
   padding: 20px;
-  /*Main Index relleno*/
 }
-main .caja-novedades .imgrelleno {
+main .imgrelleno {
   width: 25%;
   border-radius: 0.5rem;
 }
-main .caja-novedades .imgrellenoFX {
+main .imgrellenoFX {
   transition: transform 0.3s ease;
 }
-main .caja-novedades .imgrellenoFX:hover {
+main .imgrellenoFX:hover {
   transform: scale(1.1);
 }
-main .caja-novedades .horizontal-relleno-index {
+main .horizontal-relleno-index {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .caja-novedades .imganen-bg {
+main .imganen-bg {
   background-image: url("./img/rell.jpg");
   background-size: cover;
   background-position: center;
   padding: 50px 0;
 }
-main .caja-novedades .titulo__novedades {
-  font-family: "Macondo", cursive;
+main .titulo__novedades {
+  font-family: "Alegreya", serif;
   font-weight: 700;
   font-style: bold;
   font-size: 3rem;
@@ -250,7 +249,7 @@ main .caja-novedades .titulo__novedades {
   margin-bottom: 20px;
   text-align: center;
 }
-main .caja-novedades .nvmg {
+main .nvmg {
   border-right: #fff;
   box-shadow: 0px 0px 10px rgba(177, 36, 36, 0.9019607843);
   border-radius: 1rem;
@@ -268,13 +267,13 @@ main .card.custom-card:hover {
   transform: translateY(-20px);
   box-shadow: 0 8px 16px rgba(255, 253, 253, 0.3);
 }
-main .card.custom-card .card-body {
+main .card .card-body {
   padding: 4px;
 }
-main .card.custom-card .card-body .text-light {
+main .card .card-body .text-light {
   color: #fff;
 }
-main .card.custom-card .card-body img {
+main .card .card-body img {
   border-radius: 10px;
 }
 main .w-50 {
@@ -304,7 +303,6 @@ main .flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
 }
 main .flex-item {
   flex: 1;
@@ -313,7 +311,6 @@ main .flex-item {
   background-color: #000000;
   text-align: center;
   cursor: pointer;
-  animation: alternate 0.5s ease-out;
 }
 main .flex-item-title {
   text-align: center;
@@ -343,6 +340,9 @@ main .flex-item:not(:last-child) {
     opacity: 1;
     transform: translateY(0);
   }
+}
+main .flex-item {
+  animation: fadeInUp 0.5s ease-out;
 }
 @media screen and (max-width: 768px) {
   main .flex-container {
@@ -587,6 +587,9 @@ header {
 }
 header .padingnav {
   padding: 1.37rem;
+}
+header .cursorpointer {
+  cursor: pointer;
 }
 header .navbar {
   background-image: linear-gradient(to bottom, #222222, rgba(0, 0, 0, 0.8470588235), #1f1e1e);

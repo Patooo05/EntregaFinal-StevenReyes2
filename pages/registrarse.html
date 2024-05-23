@@ -1,232 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Burger ONE, Pide por acá y recoge en Home. Home Burgers en casa. Pedidos para recoger y domicilios en línea. Pide acá.">
-    <meta name="keywords" content="hamburgesas, burger, mejores, florida, Uruguay">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="../img/icono-nwe03.png" type="image/x-icon">
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Macondo&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Jacquard+12+Charted&family=Kalam:wght@300;400;700&family=Lugrasimo&family=Macondo&display=swap" rel="stylesheet">
 
-    <title>Burger ONE, Es hora de registrarse!</title>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Burger ONE, Pide por acá y recoge en Home. Home Burgers en casa. Pedidos para recoger y domicilios en línea. Pide acá.">
+  <meta name="keywords" content="hamburgesas, burger, mejores, florida, Uruguay">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" href="../img/icono-nwe03.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Macondo&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Jacquard+12+Charted&family=Kalam:wght@300;400;700&family=Lugrasimo&family=Macondo&display=swap" rel="stylesheet">
+  <title>Burger ONE, Es hora de registrarse!</title>
 </head>
 
-
-<body class="background" >
+<body class="background">
+  <!-- Header Section -->
   <header class="background">
     <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top mx-auto py-4">
-        <div class="container-fluid mx-auto">
-          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <div class="container-fluid mx-auto">
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <img class="logo logo-mobile d-block d-lg-none" src="../img/icono-nwe03.png" alt="LOGO burger one">
-            <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
-                <div>
-                  <img class="logo d-none d-lg-block" src="../img/icono-nwe03.png" alt="LOGO burger one">
-                </div>
-                <ul class="navbar-nav mx-auto ">
-                    <li class="nav-item text-center marginr ">
-                        <a class="nav-link active colortxtnav text-light " href="../index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item text-center marginr">
-                        <a class="nav-link active text-light" aria-current="page" href="./productos.html">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item text-center marginr ">
-                        <a class="nav-link active text-light" href="./novedades.html">NOVEDADES</a>
-                    </li>
-                    <li class="nav-item text-center marginr">
-                        <a class="nav-link active text-light" href="./nosotros.html">NOSOTROS</a>
-                    </li>
-                    <!--Elementos solo mobile-->
-                    <li class="nav-item text-center d-block d-lg-none marginr">
-                      <a class="nav-link  text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
-                  </li>
-                  <li class="nav-item text-center d-block d-lg-none marginr">
-                      <a class="nav-link text-light arreglo-letras" href="./registrarse.html">Registrarse</a>
-                  </li>
-                  <li class="nav-item text-center d-block d-lg-none marginr">
-                    <a class="nav-link text-light " href="./perfil.html">Perfil </a>
-                  </li>
-                  <li class="nav-item text-center d-block d-lg-none marginr">
-                      <a class="nav-link text-light" href="./carrito.html">Carrito</a>
-                  </li>          
-                </ul>
-                  <!--Elementos -->
-                <ul class="navbar-nav d-flex align-items-center justify-content-between ">
-                  <li class="nav-item d-none d-lg-block ">
-                      <a class="nav-link text-light arreglo-letras fs-6" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
-                  </li>
-                  <li class="nav-item d-none d-lg-block ">
-                      <a class="nav-link text-light arreglo-letras fs-6" href="./registrarse.html">Registrarse</a>
-                  </li>
-                  <li class="nav-item d-none d-lg-block ">
-                      <a class="nav-link text-light " href="./perfil.html"><img  class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
-                  </li>
-                  <li class="nav-item usuario-nav d-none d-lg-block ">
-                      <a class="nav-link text-light" href="./carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
-                  </li>
-              </ul>
-              
-            </div>
+        <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
+          <div>
+            <img class="logo d-none d-lg-block" src="../img/icono-nwe03.png" alt="LOGO burger one">
+          </div>
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item text-center marginr">
+              <a class="nav-link active colortxtnav text-light" href="../index.html">INICIO</a>
+            </li>
+            <li class="nav-item text-center marginr">
+              <a class="nav-link active text-light" aria-current="page" href="./productos.html">PRODUCTOS</a>
+            </li>
+            <li class="nav-item text-center marginr">
+              <a class="nav-link active text-light" href="./novedades.html">NOVEDADES</a>
+            </li>
+            <li class="nav-item text-center marginr">
+              <a class="nav-link active text-light" href="./nosotros.html">NOSOTROS</a>
+            </li>
+            <!--Elementos solo mobile-->
+            <li class="nav-item d-none d-lg-block arreglo-letras cursorpointer">
+              <a class="nav-link text-light arreglo-letras fs-6 cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item text-center d-block d-lg-none marginr">
+              <a class="nav-link text-light arreglo-letras" href="./registrarse.html">Registrarse</a>
+            </li>
+            <li class="nav-item text-center d-block d-lg-none marginr">
+              <a class="nav-link text-light" href="./perfil.html">Perfil</a>
+            </li>
+            <li class="nav-item text-center d-block d-lg-none marginr">
+              <a class="nav-link text-light" href="./carrito.html">Carrito</a>
+            </li>
+          </ul>
+          <!--Elementos-->
+          <ul class="navbar-nav d-flex align-items-center justify-content-between">
+            <li class="nav-item d-none d-lg-block cursorpointer">
+              <a class="nav-link text-light arreglo-letras fs-6 cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link text-light arreglo-letras fs-6" href="./registrarse.html">Registrarse</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link text-light" href="./perfil.html"><img class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
+            </li>
+            <li class="nav-item usuario-nav d-none d-lg-block">
+              <a class="nav-link text-light" href="./carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-
-<!-- Modal -->
-<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-  <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
-    <div class="modal-content bg-dark text-white p-4">
-      <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
-        <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+        <div class="modal-content bg-dark text-white p-4">
+          <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
+            <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+              </div>
+              <div class="form-check mt-4">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+              </div>
+            </form>
           </div>
-          <div class="form-check mt-4">
-            <input type="checkbox" class="form-check-input" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">Recuérdame</label>
+          <div class="modal-footer mt-3 pt-3 border-top border-secondary">
+            <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer mt-3 pt-3 border-top border-secondary">
-        <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-       
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</header>
-<br>
-<br>
-<main >
-<div class="header-container padding2">
-    <img class="img-header-prod" src="../img/header2-min(1).jpg" alt="Header Image">
-    
-    <p class="titulos">Registrarse</p>
-</div>
+  </header>
 
-<div class="container mx-auto text-center">
-  <div class="row justify-content-center">
-      <div class="col-md-6">
-        <p class="saborea text-center text-light bg-dark border p-2">Te lo enviamos a donde estes en menos de 40 minutos sino te devolvemos el dinero <span> (Florida, Uruguay)</span> </p>
+  <br><br>
+
+  <!-- Main Section -->
+  <main>
+    <!-- Header Container -->
+    <div class="header-container padding2">
+      <img class="img-header-prod" src="../img/header2-min(1).jpg" alt="Header Image">
+      <p class="titulos">Registrarse</p>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="container mx-auto text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <p class="saborea text-center text-light bg-dark border p-2">Te lo enviamos a donde estés en menos de 40 minutos sino te devolvemos el dinero <span> (Florida, Uruguay)</span></p>
           <p class="saborea text-center text-light">Completa el siguiente formulario, estás a un paso...</p>
           <form>
-              <div class="form-group mb-3">
-                  <input type="text" class="form-control mx-auto" id="nombre" placeholder="Ingrese su Nombre" required>
-              </div>
-              <div class="form-group mb-3">
-                  <input type="text" class="form-control mx-auto" id="apellido" placeholder="Ingrese su Apellido" required>
-              </div>
-              <div class="form-group mb-3">
-                  <input type="email" class="form-control mx-auto" id="correo" placeholder="Ingrese su Correo electrónico" required>
-              </div>
-              <div class="form-group arrglotam  mb-3">
-                  <input type="password" class="form-control mx-auto" id="contraseña" placeholder="Ingrese su contraseña">
-                 
-              </div>
-              <div class="form-group mb-3">
-                  <input type="text" class="form-control mx-auto" id="ciudad" placeholder="Ingrese su ciudad">
-              </div>
-              <div class="form-group mb-3">
-                  <input type="text" class="form-control mx-auto" id="direccion" placeholder="Ingrese su dirección">
-              </div>
-              <div class="form-group mb-3">
-                  <input type="tel" class="form-control mx-auto" id="telefono" placeholder="Ingrese su número de teléfono">
-              </div>
-              <button type="submit" class="btn bg-dark text-light mx-auto mb-4 mt-4">Ir al perfil</button>
-          
-              <button type="submit" class="btn  bg-dark text-light mx-auto">Guardar cambios</button>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control mx-auto" id="nombre" placeholder="Ingrese su Nombre" required>
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control mx-auto" id="apellido" placeholder="Ingrese su Apellido" required>
+            </div>
+            <div class="form-group mb-3">
+              <input type="email" class="form-control mx-auto" id="correo" placeholder="Ingrese su Correo electrónico" required>
+            </div>
+            <div class="form-group arrglotam mb-3">
+              <input type="password" class="form-control mx-auto" id="contraseña" placeholder="Ingrese su contraseña">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control mx-auto" id="ciudad" placeholder="Ingrese su ciudad">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control mx-auto" id="direccion" placeholder="Ingrese su dirección">
+            </div>
+            <div class="form-group mb-3">
+              <input type="tel" class="form-control mx-auto" id="telefono" placeholder="Ingrese su número de teléfono">
+            </div>
+            <button type="submit" class="btn bg-dark text-light mx-auto mb-4 mt-4">Ir al perfil</button>
+            <button type="submit" class="btn bg-dark text-light mx-auto">Guardar cambios</button>
           </form>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
 
-
-    </article>
+    <!-- Information Section -->
     <section class="flex-container">
       <div class="flex-item">
         <h6 class="flex-item-title">INFORMACIÓN</h6>
         <br>
         <p class="flex-item-content">Email: info@BurgerOne.com</p>
-        <p class="flex-item-content">Blanquerna: +34 643 44 21 19</p> 
-        <p class="flex-item-content">Santa Catalina: +34 607 73 72 </p>
-        <p class="flex-item-content">Florida : +34 607 73 72 </p>
-      </div>  
+        <p class="flex-item-content">Blanquerna: +34 643 44 21 19</p>
+        <p class="flex-item-content">Santa Catalina: +34 607 73 72</p>
+        <p class="flex-item-content">Florida : +34 607 73 72</p>
+      </div>
       <div class="flex-item flex-item-title">
         <h6 class="flex-item-title">BURGER ONE</h6>
         <br>
         <p class="flex-item-content">Hamburguesería en donde</p>
-        <p class="flex-item-content">encontrarás una oferta</p> 
+        <p class="flex-item-content">encontrarás una oferta</p>
         <p class="flex-item-content">gastronómica con un estilo único</p>
       </div>
       <hr>
-      <div class="flex-item flex-item-title ">
+      <div class="flex-item flex-item-title">
         <h6 class="flex-item-title">HORARIO</h6>
         <br>
         <p class="flex-item-content">Lunes - Jueves 19:30 - 24:00 hs</p>
-        <p class="flex-item-content">Viernes a Domingo </p> 
+        <p class="flex-item-content">Viernes a Domingo</p>
         <p class="flex-item-content">13:30 - 16:00 / 19:30 - 24:00 hs</p>
-        
       </div>
     </section>
 
-    <div class="social-icons-container ">
-      <ul class="social-icons ">
+    <!-- Social Icons -->
+    <div class="social-icons-container">
+      <ul class="social-icons">
         <li><a href="https://www.instagram.com/"><img class="w-50 fixed-button" src="../img/ic-ig-tras.png" alt="icono instagram"></a></li>
-        <li><a href="https://www.facebook.com"><img  class="w-50 fixed-button" src="../img/ic-nwe-face-tras.png" alt="icono facebook"></a></li>
-        <li><a href="https://www.whatsapp.com"><img  class="w-50 fixed-button" src="../img/ic-new-what-trans.png" alt="icono whatsapp"></a></li>
+        <li><a href="https://www.facebook.com"><img class="w-50 fixed-button" src="../img/ic-nwe-face-tras.png" alt="icono facebook"></a></li>
+        <li><a href="https://www.whatsapp.com"><img class="w-50 fixed-button" src="../img/ic-new-what-trans.png" alt="icono whatsapp"></a></li>
       </ul>
     </div>
   </main>
- <hr>
- <footer>
-  <section>
-    <div class="footer00 text-fluid">
-        <div class="footer01 ">
-              <p class="burger__mini fs-3 "> Burger ONE </p>
-              <p class="text-light burger__mini  fs-5">¡Saborea la delicia en cada bocado!</p>
-             
+
+  <hr>
+
+  <!-- Footer Section -->
+  <footer>
+    <section>
+      <div class="footer00 text-fluid">
+        <div class="footer01">
+          <p class="burger__mini fs-3">Burger ONE</p>
+          <p class="text-light burger__mini fs-5">¡Saborea la delicia en cada bocado!</p>
         </div>
-        
-        <form action="#" >
-            <div class="footer01">
-                <label class="text-light fs-6" for="mail">Recibi las mejores promociones:</label>
-                <input type="email" name="mail" placeholder="Tu Correo" required id="mail">
-                <input type="submit" name="Enviar"  value="Enviar">
-            </div>
+        <form action="#">
+          <div class="footer01">
+            <label class="text-light fs-6" for="mail">Recibi las mejores promociones:</label>
+            <input type="email" name="mail" placeholder="Tu Correo" required id="mail">
+            <input type="submit" name="Enviar" value="Enviar">
+          </div>
         </form>
         <hr>
         <div class="footer02">
-  
-                    <p class="text-light text-fluid fs-6">¿Te gusta esta Web?</p>
-                    <p class="text-light text-fluid fs-6">¿Quieres tener tu proía Web?</p>
-                    <input class="mx-auto bg-dark p-1 text-light " type="submit" name="Contactar"  value="Contactar">
-                
-    </div>
-  </section>
-
+          <p class="text-light text-fluid fs-6">¿Te gusta esta Web?</p>
+          <p class="text-light text-fluid fs-6">¿Quieres tener tu proía Web?</p>
+          <input class="mx-auto bg-dark p-1 text-light" type="submit" name="Contactar" value="Contactar">
+        </div>
+      </div>
+    </section>
     <p class="text-center font-weight-bold text-light m-3">&copy; 2024 Burger ONE. Todos los derechos reservados.</p>
+  </footer>
 
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>
