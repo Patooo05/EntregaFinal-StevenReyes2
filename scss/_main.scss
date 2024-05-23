@@ -1,4 +1,11 @@
 main {
+ .padding-nav-main{
+  padding-top:auto ;
+}
+  .cursorpointer{
+    cursor: pointer;
+  }
+ 
     h1 {
       font-size: 50px;
       font-family: "Adamina", serif;
@@ -26,8 +33,8 @@ main {
       margin-bottom: 15rem;
       font-size: 3.8rem;
     }
-  /*Main Index relleno*/
-       
+
+
      
     /* Main Index Novedades */
     .caja-novedades {
@@ -37,8 +44,17 @@ main {
       margin-bottom: 3rem;
       border-radius: 30px;
       padding: 20px;
+        /*Main Index relleno*/
       .imgrelleno{
         width:25%;
+        border-radius: 0.5rem;
+}
+      .imgrellenoFX {
+                  transition: transform 0.3s ease; 
+      }
+      .imgrellenoFX:hover {
+        transform: scale(1.1);
+        
 }
       .horizontal-relleno-index {
           display: flex;
@@ -65,7 +81,10 @@ main {
     }
   
     .padding{
-      padding-top: 5.5rem;
+      padding-top: 6.3rem;
+    }
+    .padding2{
+      padding-top:4.89rem;
     }
   
     /* Cards Novedades */
@@ -129,7 +148,7 @@ main {
         margin: 0 auto;
       }
     }
-  }
+ 
  
   /* Tarjeta Horarios */
   .flex-container {
@@ -195,29 +214,29 @@ main {
     }
   }
   
-  /* Social Icons */
-  .social-icons-container {
-    text-align: center;
-    margin-top: 2rem;
-   
-  }
-  
-  .social-icons {
-    list-style: none;
-    padding: 0;
-    display: inline-block;
-   
-  
-    li {
-      display: inline-block; 
-      margin-right: 10px;
+    /* Social Icons */
+    .social-icons-container {
+      text-align: center;
+      margin-top: 2rem;
+     
     }
-  
-    img {
-      width: 40px;
-      cursor: pointer;
+    
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      display: inline-block;
+     
+    
+      li {
+        display: inline-block; 
+        margin-right: 10px;
+      }
+    
+      img {
+        width: 40px;
+        cursor: pointer;
+      }
     }
-  }
   
   /* Main pages/Nosotros */
   .conteniner-p {
@@ -431,4 +450,56 @@ button[type="submit"] {
   .btn {
       width: 100%;
   }
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.product-info h5, .product-info p {
+  margin: 0;
+}
+.btn-custom-carrito {
+  background-color: #000; 
+  color: #fff; 
+  border: 1px solid #ccc; 
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-custom-carrito:hover {
+  background-color: #333;
+  color: #111111; 
+  border-color: #757373; 
+}
+
+.btn-custom-carrito .d-flex {
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-custom-carrito .d-flex i {
+  transition: transform 0.3s ease;
+}
+
+.btn-custom-carrito:hover .d-flex i {
+  transform: translateX(5px); 
+}
+
 }

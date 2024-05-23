@@ -26,85 +26,99 @@
     <header class="background">
         <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top py-4">
             <div class="container-fluid mx-auto">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img class="logo logo-mobile d-block d-lg-none" src="../img/icono-nwe03.png" alt="LOGO burger one">
                 <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
                     <div>
-                        <img class="logo" src="../img/icono-nwe03.png" alt="LOGO burger one">
+                      <img class="logo d-none d-lg-block" src="../img/icono-nwe03.png" alt="LOGO burger one">
                     </div>
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active colortxtnav text-light" href="../index.html">INICIO</a>
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item text-center marginr ">
+                            <a class="nav-link active colortxtnav text-light " href="../index.html">INICIO</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="../pages/productos.html">PRODUCTOS</a>
+                        <li class="nav-item text-center marginr">
+                            <a class="nav-link active text-light" aria-current="page" href="./productos.html">PRODUCTOS</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" href="../pages/novedades.html">NOVEDADES</a>
+                        <li class="nav-item text-center marginr ">
+                            <a class="nav-link active text-light" href="./novedades.html">NOVEDADES</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" href="../pages/nosotros.html">NOSOTROS</a>
+                        <li class="nav-item text-center marginr">
+                            <a class="nav-link active text-light" href="./nosotros.html">NOSOTROS</a>
                         </li>
+                        <!--Elementos solo mobile-->
+                        <li class="nav-item text-center d-block d-lg-none marginr">
+                          <a class="nav-link  text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                      </li>
+                      <li class="nav-item text-center d-block d-lg-none marginr">
+                          <a class="nav-link text-light arreglo-letras" href="./registrarse.html">Registrarse</a>
+                      </li>
+                      <li class="nav-item text-center d-block d-lg-none marginr">
+                        <a class="nav-link text-light arreglo-letras " href="./perfil.html">Perfil </a>
+                      </li>
+                      <li class="nav-item text-center d-block d-lg-none marginr">
+                          <a class="nav-link text-light" href="./carrito.html">Carrito</a>
+                      </li>          
                     </ul>
-    
-                    
-                    <ul class="navbar-nav d-flex align-items-center justify-content-between">
-                      <li class="nav-item">
-                          <a class="nav-link text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                      <!--Elementos -->
+                    <ul class="navbar-nav d-flex align-items-center justify-content-between ">
+                      <li class="nav-item d-none d-lg-block fs-6 ">
+                          <a class="nav-link text-light arreglo-letras fs-6" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-light arreglo-letras" href="../pages/registrarse.html">Registrarse</a>
+                      <li class="nav-item d-none d-lg-block fs-6 ">
+                          <a class="nav-link text-light arreglo-letras fs-6" href="./registrarse.html">Registrarse</a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-light " href="../pages/perfil.html"><img  class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
+                      <li class="nav-item d-none d-lg-block ">
+                          <a class="nav-link text-light " href="./perfil.html"><img  class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
                       </li>
-                      <li class="nav-item usuario-nav">
-                          <a class="nav-link text-light" href="../pages/carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
+                      <li class="nav-item usuario-nav d-none d-lg-block ">
+                          <a class="nav-link text-light" href="./carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
                       </li>
                   </ul>
                   
                 </div>
             </div>
         </nav>
-
+    
     
     <!-- Modal -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" placeholder="Contraseña">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Recuérdame</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Iniciar Sesión</button>
-                </div>
-            </div>
+      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+        <div class="modal-content bg-dark text-white p-4">
+          <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
+            <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+              </div>
+              <div class="form-check mt-4">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer mt-3 pt-3 border-top border-secondary">
+            <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+           
+          </div>
         </div>
+      </div>
     </div>
-</header>
+    </header>
 <br>
 <br>
 <main class="">
-<div class="header-container padding">
+<div class="header-container padding2">
     <img class="img-header-prod" src="../img/header2-min(1).jpg" alt="Header Image">
     
     <p class="titulos">Carrito</p>
@@ -121,8 +135,8 @@
                             <div class="col-lg-7">
                                 <h5 class="mb-3 text-light text-center text-fluid">Continuar Compra</h5>
                                 <hr class="bg-light">
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <div>
+                                <div class="d-flex justify-content-between align-items-center mb-4 text-center">
+                                    <div class="text-center">
                                         <p class="mb-0 text-white  text-fluid text-center">TIene 4 elementos en su carrito</p>
                                     </div>
                                 </div>
@@ -133,16 +147,16 @@
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex flex-row align-items-center m-3">
                                                 <div>
-                                                    <img src="../img/novedades2.jpg" class="img-fluid rounded-3" alt="Producto">
+                                                    <img src="../img/b-Emmily.jpg" class="img-fluid product-image" alt="Producto">
                                                 </div>
-                                                <div class="ms-3 text-light">
+                                                <div class="ms-3 text-light product-info">
                                                     <h5>Producto</h5>
                                                     <p class="small mb-0 text-light">REF</p>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">2</h5>
+                                                    <h5 class="fw-normal mb-0 text-light">1</h5>
                                                 </div>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0 text-light">$380</h5>
@@ -157,18 +171,18 @@
                                 <div class="card mb-5 bg-dark">
                                   <div class="card-body list-group-item m-3">
                                       <div class="d-flex justify-content-between">
-                                          <div class="d-flex flex-row align-items-center m-3">
-                                              <div>
-                                                    <img src="../img/novedades2.jpg" class="img-fluid rounded-3" alt="Producto">
-                                                </div>
-                                                <div class="ms-3 text-light">
-                                                    <h5>Producto</h5>
-                                                    <p class="small mb-0 text-light">REF</p>
-                                                </div>
+                                        <div class="d-flex flex-row align-items-center m-3">
+                                            <div>
+                                                <img src="../img/b-Dios.jpg" class="img-fluid product-image" alt="Producto">
                                             </div>
+                                            <div class="ms-3 text-light product-info">
+                                                <h5>Producto</h5>
+                                                <p class="small mb-0 text-light">REF</p>
+                                            </div>
+                                        </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">2</h5>
+                                                    <h5 class="fw-normal mb-0 text-light">1</h5>
                                                 </div>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0 text-light">$380</h5>
@@ -183,18 +197,18 @@
                                 <div class="card mb-5 bg-dark">
                                   <div class="card-body list-group-item m-3">
                                       <div class="d-flex justify-content-between">
-                                          <div class="d-flex flex-row align-items-center m-3">
-                                              <div>
-                                                    <img src="../img/novedades2.jpg" class="img-fluid rounded-3" alt="Producto">
-                                                </div>
-                                                <div class="ms-3 text-light">
-                                                    <h5>Producto</h5>
-                                                    <p class="small mb-0 text-light">REF</p>
-                                                </div>
+                                        <div class="d-flex flex-row align-items-center m-3">
+                                            <div>
+                                                <img src="../img/b-Cabrona.jpg" class="img-fluid product-image" alt="Producto">
                                             </div>
+                                            <div class="ms-3 text-light product-info">
+                                                <h5>Cabrona</h5>
+                                                <p class="small mb-0 text-light">REF</p>
+                                            </div>
+                                        </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">2</h5>
+                                                    <h5 class="fw-normal mb-0 text-light">1</h5>
                                                 </div>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0 text-light">$380</h5>
@@ -204,37 +218,10 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Producto 4 -->
-                                <div class="card mb-5 bg-dark">
-                                  <div class="card-body list-group-item m-3">
-                                      <div class="d-flex justify-content-between">
-                                          <div class="d-flex flex-row align-items-center m-3">
-                                              <div>
-                                                    <img src="../img/novedades2.jpg" class="img-fluid rounded-3" alt="Producto">
-                                                </div>
-                                                <div class="ms-3 text-light">
-                                                    <h5>Producto</h5>
-                                                    <p class="small mb-0 text-light">REF</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">2</h5>
-                                                </div>
-                                                <div style="width: 80px;">
-                                                    <h5 class="mb-0 text-light">$380</h5>
-                                                </div>
-                                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col-lg-5 mx-auto">
-                                <div class="card bg-primary text-white rounded-3">
+                         </div>
+<br>
+                            <div class="col-lg-5 mx-auto pt-5">
+                                <div class="card bg-primary border-secondary text-white rounded-3">
                                     <div class="card-body bg-dark">
                                         <div class="d-flex justify-content-between align-items-center mb-4">
                                             <h5 class="mb-0">Detalles de la Tarjeta</h5>
@@ -267,7 +254,7 @@
                                         <hr class="my-4 bg-light">
                                         <div class="d-flex justify-content-between">
                                             <p class="mb-2">Subtotal</p>
-                                            <p class="mb-2">$4798.00</p>
+                                            <p class="mb-2">$1520.00</p>
                                         </div>
                                         <div class="d-flex justify-content-between">
                                             <p class="mb-2">Shipping</p>
@@ -275,13 +262,15 @@
                                         </div>
                                         <div class="d-flex justify-content-between mb-4">
                                             <p class="mb-2">Total (Incl. taxes)</p>
-                                            <p class="mb-2">$4818.00</p>
+                                            <p class="mb-2">$1540.00</p>
                                         </div>
-                                        <button type="button" class="btn btn-info btn-block btn-lg">
+                                        <button type="button" class="btn btn-info btn-custom-carrito btn-block btn-lg">
                                             <div class="d-flex justify-content-between">
                                                 <span>Pagar <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                                             </div>
                                         </button>
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>

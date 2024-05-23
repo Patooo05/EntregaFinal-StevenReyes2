@@ -30,41 +30,53 @@
   <header class="background">
     <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top py-4">
         <div class="container-fluid mx-auto">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <img class="logo logo-mobile d-block d-lg-none" src="./img/icono-nwe03.png" alt="LOGO burger one">
             <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
                 <div>
-                    <img class="logo" src="./img/icono-nwe03.png" alt="LOGO burger one">
+                  <img class="logo d-none d-lg-block" src="../img/icono-nwe03.png" alt="LOGO burger one">
                 </div>
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item text-center marginr">
                         <a class="nav-link active colortxtnav text-light" href="./index.html">INICIO</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center marginr">
                         <a class="nav-link active text-light" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center marginr">
                         <a class="nav-link active text-light" href="./pages/novedades.html">NOVEDADES</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center marginr">
                         <a class="nav-link active text-light" href="./pages/nosotros.html">NOSOTROS</a>
                     </li>
-                 
-                </ul>
-
-                
-                <ul class="navbar-nav d-flex align-items-center justify-content-between">
-                  <li class="nav-item">
-                      <a class="nav-link text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                    <!--Elementos solo mobile-->
+                    <li class="nav-item text-center d-block d-lg-none marginr">
+                      <a class="nav-link  text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item text-center d-block d-lg-none marginr">
                       <a class="nav-link text-light arreglo-letras" href="./pages/registrarse.html">Registrarse</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item text-center d-block d-lg-none marginr">
+                    <a class="nav-link text-light " href="./pages/perfil.html">Perfil </a>
+                  </li>
+                  <li class="nav-item text-center d-block d-lg-none marginr">
+                      <a class="nav-link text-light" href="./pages/carrito.html">Carrito</a>
+                  </li>          
+                </ul>
+                  <!--Elementos mobile-->
+                <ul class="navbar-nav d-flex align-items-center justify-content-between ">
+                  <li class="nav-item d-none d-lg-block">
+                      <a class="nav-link text-light arreglo-letras fs-6" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
+                      <a class="nav-link text-light arreglo-letras fs-6" href="./pages/registrarse.html">Registrarse</a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
                       <a class="nav-link text-light " href="./pages/perfil.html"><img  class="w-75" src="./img/icono-editar-perfil.png" alt="editar perfil"></a>
                   </li>
-                  <li class="nav-item usuario-nav">
+                  <li class="nav-item usuario-nav d-none d-lg-block">
                       <a class="nav-link text-light" href="./pages/carrito.html"><img class="w-75" src="./img/icono-carrito-nav.png" alt="carrito de compras"></a>
                   </li>
               </ul>
@@ -76,39 +88,40 @@
 
 <!-- Modal -->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content bg-dark text-white">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Recuérdame</label>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Iniciar Sesión</button>
-            </div>
-        </div>
+  <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+    <div class="modal-content bg-dark text-white p-4">
+      <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
+        <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+          </div>
+          <div class="form-check mt-4">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Recuérdame</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer mt-3 pt-3 border-top border-secondary">
+        <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+       
+      </div>
     </div>
+  </div>
 </div>
 </header>
-<main class="main__index">
-  <br>
-  <br>
+<br>
+<main class="padding">
+ 
   <div id="carouselExampleCaptions" class="carousel slide padding ">
        <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -167,9 +180,9 @@
 <section class="py-5  ">
   <div class=" w-100 horizontal-relleno-index py-5">
  
-    <img class="imgrelleno" src="./img/relleno01.jpg" alt="relleno imagen">
+    <img class="imgrelleno imgrellenoFX" src="./img/relleno01.jpg" alt="relleno imagen">
     <img class="imgrelleno" src="./img/action.jpg" alt="imagen action">
-    <img class="imgrelleno" src="./img/relleno02.jpg" alt="relleno imagen">
+    <img class="imgrelleno imgrellenoFX" src="./img/relleno02.jpg" alt="relleno imagen">
   
 </div>
 
@@ -182,10 +195,10 @@
     <div class="container">
       <div class="row " >
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto">
+          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard1">
             <img class="novedades--img img-fluid" src="./img/novGRINGAS-min-1.png" alt="Novedades de línea vegetal">
             <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos solamente en nuestros locales.</p>
+              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
               <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
               <div>
                 <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
@@ -194,10 +207,10 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto">
+          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard2">
             <img class="novedades--img img-fluid" src="./img/novCHINGA-min.png" alt="Novedades de línea vegetal">
             <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos solamente en nuestros locales.</p>
+              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
               <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
               <div>
                 <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
@@ -206,10 +219,10 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto">
+          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard3">
             <img class="novedades--img img-fluid" src="./img/novNachos_Puta_Madre.jpg" alt="Novedades de línea vegetal">
             <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos solamente en nuestros locales.</p>
+              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
               <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
               <div>
                 <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
@@ -218,10 +231,10 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-          <div class="card custom-card mx-auto">
+          <div class="card custom-card mx-auto cursorpointer" data-bs-toggle="modal" data-bs-target="#modalCard4">
             <img class="novedades--img img-fluid" src="./img/novPADRISIMOS-min.png" alt="Novedades de línea vegetal">
             <div class="card-body text-center">
-              <p class="text-light m-3">Adquirirlos solamente en nuestros locales.</p>
+              <p class="text-light m-3">Adquirirlos únicamente en nuestros locales.</p>
               <p class="text-light m-3">Te obsequiamos un 2 x 1 con este QR</p>
               <div>
                 <img class="w-50 mx-auto m-3 p-3" src="./img/scan_me_qr_code.jpg" alt="QR Code">
@@ -232,6 +245,90 @@
       </div>
     </div>
   </section>
+
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title bg-dark text-light" id="modalCard1Label">Escanea este QR con tu celular</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-dark mx-auto align-items-center">
+          <div class="mx-auto">
+            <p class="text-light text-center">2 x 1 de Patatas Gringas</p>
+            <img class="w-50 mx-auto m-3 p-3 mx-auto d-block" src="../img/scan_me_qr_code.jpg" alt="QR Code">
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modalCard2" tabindex="-1" aria-labelledby="modalCard2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-light text-center" id="modalCard2Label">Escanea este QR con tu celular</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-dark">
+          <div class="mx-auto">
+            <p class="text-light text-center">2 x 1 de Chinga tus Nachos</p>
+            <img class="w-50 mx-auto m-3 p-3mx-auto d-block" src="../img/scan_me_qr_code.jpg" alt="QR Code">
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 3 -->
+  <div class="modal fade" id="modalCard3" tabindex="-1" aria-labelledby="modalCard3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-light text-center" id="modalCard3Label">Escanea este QR con tu celular</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-dark">
+          <div class="mx-auto">
+            <p class="text-center text-light">2 x 1 de Nachos P. Madre</p>
+            <img class="w-50 mx-auto m-3 p-3 mx-auto d-block" src="../img/scan_me_qr_code.jpg" alt="QR Code">
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 4 -->
+  <div class="modal fade" id="modalCard4" tabindex="-1" aria-labelledby="modalCard4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-light text-center" id="modalCard4Label">Escanea este QR con tu celular</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-dark">
+          <div class="mx-auto">
+            <p class="text-light text-center" >2 x 1 de Nachos Padrísimos</p>
+            <img class="w-50 mx-auto m-3 p-3 mx-auto d-block" src="../img/scan_me_qr_code.jpg" alt="QR Code">
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <br>
 </article>
   <section class="flex-container">

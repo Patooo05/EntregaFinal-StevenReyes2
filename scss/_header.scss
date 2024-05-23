@@ -1,70 +1,60 @@
-
 header {
-        .navbar {
-          background-image: linear-gradient(to bottom, #222222  ,#000000d8 , #1f1e1e  );
-          opacity: 0.8;
-        
-        }
-        .navbar-nav .nav-link {
-                font-size: 18px;
-                margin-left: 30px;
-                margin-top: 5px;
-                
-                font-weight: 400;
-                opacity: 0.9;
-        }
-      
-       .nav-link::after {
-           content: "";
-           height: 3px;
-           width: 0;
-           background-color: rgb(255, 255, 255);
-           display: block;
-           transition: all 350ms;
-          
-           
+  .navbar {
+      background-image: linear-gradient(to bottom, #222222, #000000d8, #1f1e1e);
+      opacity: 0.8;
+  }
+  .navbar-nav .nav-link {
+      font-size: 18px;
+      margin-left: 15px;
+      margin-top: 5px;
+      font-weight: 400;
+      opacity: 0.9;
+      padding: 10px;
+  }
+  .nav-link::after {
+      content: "";
+      height: 3px;
+      width: 0;
+      background-color: rgb(255, 255, 255);
+      display: block;
+      transition: all 350ms;
+  }
+  .nav-link:hover::after {
+      width: 100%;
+      opacity: 0.5;
+  }
 
-        }
-        .nav-link:hover::after{
-          width: 100%;
-          opacity: 0.5;
-          
-          
-        }
-     
-      .logo{
-       padding: 0.2rem;
-   margin: 0.9rem;
-       margin-left: 2.1rem;
-        background-color: rgb(255, 255, 255);
-        border-radius: 5%;
-        border-bottom: rgba(141, 4, 4, 0.747) solid;
-      
-      }
-        .nav__sombra{
-            box-shadow: 0px 0px 10px rgba(224, 224, 224, 0.7);
-            margin: 0 auto;
-            display: flex;
-        }
-       
-     
-    
-    .usuario-nav{
-      padding-right: 1rem;
-    }
-    .arreglo-letras{
-      font-size: 1rem;
+  .logo {
+      padding: 0.2rem;
+      margin: 0.5rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5%;
+      border-bottom: rgba(141, 4, 4, 0.747) solid;
+  }
+  .nav__sombra {
+      box-shadow: 0px 0px 10px rgba(224, 224, 224, 0.7);
       margin: 0 auto;
+      display: flex;
+      align-items: center;
+  }
+  /* Arreglos nav-usuario */
+  .usuario-nav {
+      padding-right: 1rem;
+  }
+  .arreglo-letras .nav-link {
+      
       cursor: pointer;
-    }
-
-    .width-ico{
+  }
+  .width-ico {
       width: 2.1em;
-    }
-    .marginnav{
-      margin-right: 10rem;
-    }
-    .navbar-toggler-icon {
+  }
+  .navbar-toggler-icon {
       color: #ffffff;
   }
-  }/*Cierra header*/
+  .marginr{
+    margin-left:7rem;
+  }
+  .marginr2{
+
+  }
+}

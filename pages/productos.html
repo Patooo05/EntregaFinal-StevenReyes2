@@ -26,87 +26,100 @@
     <header class="background">
         <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top py-4">
             <div class="container-fluid mx-auto">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img class="logo logo-mobile d-block d-lg-none" src="../img/icono-nwe03.png" alt="LOGO burger one">
                 <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
                     <div>
-                        <img class="logo" src="../img/icono-nwe03.png" alt="LOGO burger one">
+                      <img class="logo d-none d-lg-block" src="../img/icono-nwe03.png" alt="LOGO burger one">
                     </div>
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active colortxtnav text-light" href="../index.html">INICIO</a>
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item text-center marginr ">
+                            <a class="nav-link active colortxtnav text-light " href="../index.html">INICIO</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="../pages/productos.html">PRODUCTOS</a>
+                        <li class="nav-item text-center marginr">
+                            <a class="nav-link active text-light" aria-current="page" href="./productos.html">PRODUCTOS</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" href="../pages/novedades.html">NOVEDADES</a>
+                        <li class="nav-item text-center marginr ">
+                            <a class="nav-link active text-light" href="./novedades.html">NOVEDADES</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" href="../pages/nosotros.html">NOSOTROS</a>
+                        <li class="nav-item text-center marginr">
+                            <a class="nav-link active text-light" href="./nosotros.html">NOSOTROS</a>
                         </li>
+                        <!--Elementos solo mobile-->
+                        <li class="nav-item text-center d-block d-lg-none marginr">
+                          <a class="nav-link  text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                      </li>
+                      <li class="nav-item text-center d-block d-lg-none marginr">
+                          <a class="nav-link text-light arreglo-letras" href="./registrarse.html">Registrarse</a>
+                      </li>
+                      <li class="nav-item text-center d-block d-lg-none marginr">
+                        <a class="nav-link text-light " href="./perfil.html">Perfil </a>
+                      </li>
+                      <li class="nav-item text-center d-block d-lg-none marginr">
+                          <a class="nav-link text-light" href="./carrito.html">Carrito</a>
+                      </li>          
                     </ul>
-    
-                    
-                    <ul class="navbar-nav d-flex align-items-center justify-content-between">
-                      <li class="nav-item">
-                          <a class="nav-link text-light arreglo-letras" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                      <!--Elementos -->
+                    <ul class="navbar-nav d-flex align-items-center justify-content-between ">
+                      <li class="nav-item d-none d-lg-block ">
+                          <a class="nav-link text-light arreglo-letras fs-6" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-light arreglo-letras" href="../pages/registrarse.html">Registrarse</a>
+                      <li class="nav-item d-none d-lg-block ">
+                          <a class="nav-link text-light arreglo-letras fs-6" href="./registrarse.html">Registrarse</a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-light " href="../pages/perfil.html"><img  class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
+                      <li class="nav-item d-none d-lg-block ">
+                          <a class="nav-link text-light " href="./perfil.html"><img  class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
                       </li>
-                      <li class="nav-item usuario-nav">
-                          <a class="nav-link text-light" href="../pages/carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
+                      <li class="nav-item usuario-nav d-none d-lg-block ">
+                          <a class="nav-link text-light" href="./carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
                       </li>
                   </ul>
                   
                 </div>
             </div>
         </nav>
-
+    
     
     <!-- Modal -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" placeholder="Contraseña">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Recuérdame</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Iniciar Sesión</button>
-                </div>
-            </div>
+      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+        <div class="modal-content bg-dark text-white p-4">
+          <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
+            <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+              </div>
+              <div class="form-check mt-4">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer mt-3 pt-3 border-top border-secondary">
+            <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+           
+          </div>
         </div>
+      </div>
     </div>
-</header>
+    </header>
 <br>
 <br>
-<main class="">
-    <div class="header-container padding">
+<main  class=" padding2">
+    <div class="header-container padding2">
         <img class="img-header-prod" src="../img/header2-min(1).jpg" alt="Header Image">
-        
         <p class="titulos">Best Smash Burgers</p>
     </div>
    
@@ -142,7 +155,7 @@
                                            
                                            
                                             <p class="card-text  text-light precio-destacado">Precio: $420</p>
-                                            <button class="btn  bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto2">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light k btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto2">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +166,7 @@
                                            
                                            
                                             <p class="card-text text-light precio-destacado">Precio: $390</p>
-                                            <button class="btn bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto3">Agregar al carrito</button>
+                                            <button class="btn bg-dark text-light btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto3">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +177,7 @@
                                            
                                            
                                             <p class="card-text text-light precio-destacado">Precio: $420</p>
-                                            <button class="btn  bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto4">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto4">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +188,7 @@
                                             
                                             
                                             <p class="card-text text-light precio-destacado">Precio: $390</p>
-                                            <button class="btn  bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto5">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light  btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto5">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +199,7 @@
                                             
                                            
                                             <p class="card-text text-light precio-destacado">Precio: $390</p>
-                                            <button class="btn  bg-dark text-light btn-block" data-bs-toggle="modal" data-bs-target="#modalProducto6">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light" data-bs-toggle="modal" data-bs-target="#modalProducto6">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +210,7 @@
                                            
                                         
                                             <p class="card-text text-light precio-destacado">Precio: $390</p>
-                                            <button class="btn  bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto6">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light  btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto7">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -208,7 +221,7 @@
                                             
                                       
                                             <p class="card-text text-light precio-destacado">Precio: $390</p>
-                                            <button class="btn  bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto6">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light k btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto8">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +232,7 @@
                                             
                                       
                                             <p class="card-text text-light precio-destacado">Precio: $390</p>
-                                            <button class="btn  bg-dark text-light btn-block btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto6">Agregar al carrito</button>
+                                            <button class="btn  bg-dark text-light  btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto9">Agregar al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -243,9 +256,9 @@
               <p class="card-text text-light precio-destacado text-center">Precio: $380</p>
             </div>
             <div class="modal-footer card-body">
-              <button type="button" class="btn bg-dark text-light btn-block" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
               <a href="./carrito.html">
-                <button type="button" class="btn bg-dark text-light btn-block">Agregar Carrito</button>
+                <button type="button" class="btn bg-dark text-light ">Agregar Carrito</button>
               </a>
             </div>
           </div>
@@ -267,8 +280,10 @@
                     <p class="card-text text-light text-center precio-destacado">Precio: $420</p>
                 </div>
                 <div class="modal-footer card-body">
-                    <button type="button" class="btn  bg-dark text-light btn-block" data-bs-dismiss="modal">Cerrar</button>
-                   <a href="./carrito.html"> <button type="button" class="btn bg-dark text-light btn-block">Agregar Carrito</button></a>
+                    <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                  <a href="./carrito.html">
+                    <button type="button" class="btn bg-dark text-light ">Agregar Carrito</button>
+                  </a>
                 </div>
             </div>
         </div>
@@ -288,8 +303,10 @@
                     <p class="card-text text-light text-center precio-destacado">Precio: $390</p>
                 </div>
                 <div class="modal-footer card-body">
-                    <button type="button" class="btn  bg-dark text-light btn-block" data-bs-dismiss="modal">Cerrar</button>
-                   <a href="./carrito.html"> <button type="button" class="btn bg-dark text-light btn-block">Agregar Carrito</button></a>
+                    <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                  <a href="./carrito.html">
+                    <button type="button" class="btn bg-dark text-light ">Agregar Carrito</button>
+                  </a>
                 </div>
             </div>
         </div>
@@ -309,54 +326,124 @@
                     <p class="card-text text-light text-center precio-destacado">Precio: $420</p>
                 </div>
                 <div class="modal-footer card-body">
-                    <button type="button" class="btn  bg-dark text-light btn-block" data-bs-dismiss="modal">Cerrar</button>
-                   <a href="./carrito.html"> <button type="button" class="btn bg-dark text-light btn-block">Agregar Carrito</button></a>
+                    <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                  <a href="./carrito.html">
+                    <button type="button" class="btn bg-dark text-light ">Agregar Carrito</button>
+                  </a>
                 </div>
             </div>
         </div>
     </div>    
 
-    <div class="modal fade" id="modalProducto5" data-bs-backdrop="static" data-bs-keyboard="false"      tabindex="-1" aria-labelledby="modalProducto5Label" aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered ">
-            <div class="modal-content border custom-modal" >
+    <div class="modal fade" id="modalProducto5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalProducto5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border custom-modal">
                 <div class="modal-header card-body">
-                    <h3 class="modal-title fs-5 text-center text-light " id="staticBackdropLabel">Confirmar articulo</h3>
+                    <h3 class="modal-title fs-5 text-center text-light" id="modalProducto5Label">Confirmar articulo</h3>
                     <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body card-body">
-                    <img src="../img/b-Emmily.jpg" class="card-img-top mx-auto py-2 " alt="Producto 5">
-                
+                    <img src="../img/b-Emmily.jpg" class="card-img-top mx-auto py-2" alt="Producto 5">
                     <p class="card-text text-light text-center precio-destacado">Precio: $390</p>
                 </div>
                 <div class="modal-footer card-body">
-                    <button type="button" class="btn  bg-dark text-light btn-block" data-bs-dismiss="modal">Cerrar</button>
-                   <a href="./carrito.html"> <button type="button" class="btn bg-dark text-light btn-block">Agregar Carrito</button></a>
+                    <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="./carrito.html">
+                        <button type="button" class="btn bg-dark text-light">Agregar Carrito</button>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>    
-
-    <div class="modal fade" id="modalProducto6" data-bs-backdrop="static" data-bs-keyboard="false"      tabindex="-1" aria-labelledby="modalProducto6Label" aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered ">
-            <div class="modal-content border custom-modal" >
+    </div>
+    
+    <div class="modal fade" id="modalProducto6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalProducto6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border custom-modal">
                 <div class="modal-header card-body">
-                    <h3 class="modal-title fs-5 text-center text-light " id="staticBackdropLabel">Confirmar articulo</h3>
+                    <h3 class="modal-title fs-5 text-center text-light" id="modalProducto6Label">Confirmar articulo</h3>
                     <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body card-body">
                     <img src="../img/b-Epicarda.jpg" class="card-img-top mx-auto py-2" alt="Producto 6">
-                   
                     <p class="card-text text-light text-center precio-destacado">Precio: $390</p>
                 </div>
                 <div class="modal-footer card-body">
-                    <button type="button" class="btn w-50 bg-dark text-light btn-block" data-bs-dismiss="modal">Cerrar</button>
-                   <a href="./carrito.html"> <button type="button" class="btn  bg-dark text-light btn-block">Agregar Carrito</button></a>
+                    <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="./carrito.html">
+                        <button type="button" class="btn bg-dark text-light">Agregar Carrito</button>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    
+
+   <!-- Modal Producto 7 -->
+<div class="modal fade" id="modalProducto7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalProducto7Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border custom-modal">
+            <div class="modal-header card-body">
+                <h3 class="modal-title fs-5 text-center text-light" id="modalProducto7Label">Confirmar articulo</h3>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body card-body">
+                <img src="../img/b-Epicarda.jpg" class="card-img-top mx-auto py-2" alt="Producto 7">
+                <p class="card-text text-light text-center precio-destacado">Precio: $390</p>
+            </div>
+            <div class="modal-footer card-body">
+                <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                <a href="./carrito.html">
+                    <button type="button" class="btn bg-dark text-light">Agregar Carrito</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Producto 8 -->
+<div class="modal fade" id="modalProducto8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalProducto8Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border custom-modal">
+            <div class="modal-header card-body">
+                <h3 class="modal-title fs-5 text-center text-light" id="modalProducto8Label">Confirmar articulo</h3>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body card-body">
+                <img src="../img/b-Epicarda.jpg" class="card-img-top mx-auto py-2" alt="Producto 8">
+                <p class="card-text text-light text-center precio-destacado">Precio: $390</p>
+            </div>
+            <div class="modal-footer card-body">
+                <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                <a href="./carrito.html">
+                    <button type="button" class="btn bg-dark text-light">Agregar Carrito</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Producto 9 -->
+<div class="modal fade" id="modalProducto9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalProducto9Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border custom-modal">
+            <div class="modal-header card-body">
+                <h3 class="modal-title fs-5 text-center text-light" id="modalProducto9Label">Confirmar articulo</h3>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body card-body">
+                <img src="../img/b-Epicarda.jpg" class="card-img-top mx-auto py-2" alt="Producto 9">
+                <p class="card-text text-light text-center precio-destacado">Precio: $390</p>
+            </div>
+            <div class="modal-footer card-body">
+                <button type="button" class="btn w-50 bg-dark text-light" data-bs-dismiss="modal">Cerrar</button>
+                <a href="./carrito.html">
+                    <button type="button" class="btn bg-dark text-light">Agregar Carrito</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </article>
 <section class="flex-container">
   <div class="flex-item">

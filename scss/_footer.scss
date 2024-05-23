@@ -65,5 +65,29 @@ footer{
         font-size: 2rem;
         background-color: black;
     }
+
+    /* Social Icons */
+  .social-icons-container {
+    text-align: center;
+    margin-top: 2rem;
+   
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+   
+  
+    li {
+      display: inline-block; 
+      margin-right: 10px;
+    }
+  
+    img {
+      width: 40px;
+      cursor: pointer;
+    }
+  }
    
 }/*Cierra FOOTER*/
