@@ -18,11 +18,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Jacquard+12+Charted&family=Kalam:wght@300;400;700&family=Lugrasimo&family=Macondo&display=swap" rel="stylesheet">
 
     <title>Burger ONE, Tu carrito</title>
-    
 </head>
 
-
-<body class="background" >
+<body class="background">
     <header class="background">
         <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top padingnav">
             <div class="container-fluid mx-auto">
@@ -76,55 +74,54 @@
                           <a class="nav-link text-light" href="./carrito.html"><img class="w-75" src="../img/icono-carrito-nav.png" alt="carrito de compras"></a>
                       </li>
                   </ul>
-                  
                 </div>
             </div>
         </nav>
     
-    
     <!-- Modal -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100 ">
-        <div class="modal-content bg-dark text-white p-4">
-          <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
-            <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+      <div class="modal-dialog d-flex align-items-center justify-content-center min-vh-100">
+          <div class="modal-content bg-dark text-white p-4">
+              <div class="modal-header mb-3 pb-3 border-bottom border-secondary">
+                  <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+                  <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+              <div class="modal-body">
+                  <form id="loginForm">
+                      <div class="mb-3">
+                          <label for="email" id="email" class="form-label">Correo Electrónico</label>
+                          <input type="email" id="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" id="password" class="form-label">Contraseña</label>
+                          <input type="password" id="password" class="form-control" id="password" placeholder="Contraseña">
+                      </div>
+                      <div class="form-check mt-4">
+                          <input type="checkbox" class="form-check-input" id="rememberMe">
+                          <label class="form-check-label" for="rememberMe">Recuérdame</label>
+                      </div>
+                  </form>
               </div>
-              <div class="form-check mt-4">
-                <input type="checkbox" class="form-check-input" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+              <div class="modal-footer mt-3 pt-3 border-top border-secondary">
+                  <button type="button" class="btn btn-secondary" id="loginButton">Iniciar Sesión</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
               </div>
-            </form>
           </div>
-          <div class="modal-footer mt-3 pt-3 border-top border-secondary">
-            <button type="button" class="btn btn-secondary">Iniciar Sesión</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-           
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
+  
     </header>
+
 <br>
 <br>
 <main class="">
 <div class="header-container padding2">
     <img class="img-header-prod" src="../img/header2-min(1).jpg" alt="Header Image">
-    
     <p class="titulos">Carrito</p>
 </div>
-<div >
 
+
+<div>
   <section class="h-100 h-custom py-5">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -137,116 +134,64 @@
                                 <hr class="bg-light">
                                 <div class="d-flex justify-content-between align-items-center mb-4 text-center">
                                     <div class="text-center">
-                                        <p class="mb-0 text-white  text-fluid text-center">TIene 4 elementos en su carrito</p>
+                                        <p class="mb-0 text-white text-fluid text-center">Tienes <span id="cart-count">0</span> elementos en tu carrito</p>
                                     </div>
                                 </div>
 
-                                <!-- Producto 1 -->
-                                <div class="card mb-5 bg-dark">
-                                    <div class="card-body list-group-item m-3">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex flex-row align-items-center m-3">
-                                                <div>
-                                                    <img src="../img/b-Emmily.jpg" class="img-fluid product-image" alt="Producto">
-                                                </div>
-                                                <div class="ms-3 text-light product-info">
-                                                    <h5>Producto</h5>
-                                                    <p class="small mb-0 text-light">REF</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">1</h5>
-                                                </div>
-                                                <div style="width: 80px;">
-                                                    <h5 class="mb-0 text-light">$380</h5>
-                                                </div>
-                                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Producto 2 -->
-                                <div class="card mb-5 bg-dark">
-                                  <div class="card-body list-group-item m-3">
-                                      <div class="d-flex justify-content-between">
-                                        <div class="d-flex flex-row align-items-center m-3">
-                                            <div>
-                                                <img src="../img/b-Dios.jpg" class="img-fluid product-image" alt="Producto">
-                                            </div>
-                                            <div class="ms-3 text-light product-info">
-                                                <h5>Producto</h5>
-                                                <p class="small mb-0 text-light">REF</p>
-                                            </div>
-                                        </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 text-light">1</h5>
-                                                </div>
-                                                <div style="width: 80px;">
-                                                    <h5 class="mb-0 text-light">$380</h5>
-                                                </div>
-                                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Producto 3 -->
-                         </div>
-<br>
-                            <div class="col-lg-5 mx-auto pt-5">
-                                <div class="card bg-primary border-secondary text-white rounded-3 w-100">
-                                    <div class="card-body bg-dark p-4">
-                                        <div class="d-flex justify-content-between align-items-center mb-4">
-                                            <h5 class="mb-0">Detalles de la Tarjeta</h5>
-                                            <img src="../img/img-perfil.jpg" class="img-fluid rounded-3" style="width: 75px;" alt="Avatar">
-                                        </div>
-                                        <form class="mt-4">
-                                            <div class="form-outline form-white mb-4">
-                                                <input type="text" id="typeName" class="form-control " size="17" placeholder="Nombre del titular" />
-                                                
-                                            </div>
-                                            <div class="form-outline form-white mb-4">
-                                                <input type="text" id="typeText" class="form-control " size="17" placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                                               
-                                            </div>
-                                            <div class="row mb-4">
-                                                <div class="col-md-6">
-                                                    <div class="form-outline form-white">
-                                                        <input type="text" id="typeExp" class="form-control " placeholder="MM/YYYY" size="7" minlength="7" maxlength="7" />
-                                                        <label class="form-label" for="typeExp">F.V</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-outline form-white">
-                                                        <input type="password" id="typeText" class="form-control " placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                                                        <label class="form-label" for="typeText">Cvv</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <hr class="my-4 bg-light">
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">Subtotal</p>
-                                            <p class="mb-2">$1520.00</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">Shipping</p>
-                                            <p class="mb-2">$20.00</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between mb-4">
-                                            <p class="mb-2">Total (Incl. taxes)</p>
-                                            <p class="mb-2">$1540.00</p>
-                                        </div>
-                                        <button type="button" class="btn btn-info btn-custom-carrito btn-block btn-lg">
-                                            <div class="d-flex justify-content-between">
-                                                <span>Pagar <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
+                                <ul id="cart-items" class="list-group">
+                                  <!-- Aquí se añadirán los elementos del carrito dinámicamente -->
+                                </ul>
                             </div>
+                            
+                            <div class="col-lg-5 mx-auto pt-5">
+                              <div class="card bg-primary border-secondary text-white rounded-3 w-100">
+                                <div class="card-body bg-dark p-4">
+                                  <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="mb-0">Detalles de la Tarjeta</h5>
+                                    <img src="../img/img-perfil.jpg" class="img-fluid rounded-3" style="width: 75px;" alt="Avatar">
+                                  </div>
+                                  <form id="formCompra" class="mt-4">
+                                    <div class="form-outline form-white mb-4">
+                                      <input type="text" id="typeName" class="form-control" size="17" placeholder="Nombre del titular" required />
+                                    </div>
+                                    <div class="form-outline form-white mb-4">
+                                      <input type="text" id="typeText" class="form-control" size="17" placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" required />
+                                    </div>
+                                    <div class="row mb-4">
+                                      <div class="col-md-6">
+                                        <div class="form-outline form-white">
+                                          <input type="text" id="typeExp" class="form-control" placeholder="MM/YYYY" size="7" minlength="7" maxlength="7" required />
+                                          <label class="form-label" for="typeExp">F.V</label>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="form-outline form-white">
+                                          <input type="password" id="typeCvv" class="form-control" placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" required />
+                                          <label class="form-label" for="typeCvv">Cvv</label>
+                                        </div>
+                                      </div>
+                                      <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Subtotal</p>
+                                        <p class="mb-2" id="subtotal">$0.00</p>
+                                      </div>
+                                      <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Envío</p>
+                                        <p class="mb-2" id="shipping">$20.00</p>
+                                      </div>
+                                      <div class="d-flex justify-content-between mb-4">
+                                        <p class="mb-2">Total (Incl. impuestos)</p>
+                                        <p class="mb-2" id="total">$20.00</p>
+                                      </div>
+                                      <div><p id="mensajeCompra" class="mt-3"></p></div>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary">Pagar</button>
+                                  </form>
+                              </div>
+                            </div>
+                           </div>
+                        </div>
+                            
+                         
                         </div>
                     </div>
                 </div>
@@ -279,7 +224,6 @@
       <p class="flex-item-content">Lunes - Jueves 19:30 - 24:00 hs</p>
       <p class="flex-item-content">Viernes a Domingo </p> 
       <p class="flex-item-content">13:30 - 16:00 / 19:30 - 24:00 hs</p>
-      
     </div>
   </section>
 
@@ -304,17 +248,16 @@
         
         <form action="#" >
             <div class="footer01 ">
-                <label class="text-light fs-6" for="mail">Recibi las mejores promociones:</label>
+                <label class="text-light fs-6" for="mail">Recibe las mejores promociones:</label>
                 <input type="email" name="mail" placeholder="Tu Correo" required id="mail">
                 <input type="submit" name="Enviar"  value="Enviar">
             </div>
         </form>
         <hr>
         <div class="footer02 ">
-           
-             <p class="text-light  fs-6">¿Te gusta esta Web?</p>
-             <p class="text-light  fs-6">¿Quieres tener tu proía Web?</p>
-             <input class="mx-auto bg-dark p-1 text-light" type="submit" name="Contactar"  value="Contactar">
+             <p class="text-light fs-6">¿Te gusta esta Web?</p>
+             <p class="text-light fs-6">¿Quieres tener tu propia Web?</p>
+             <input class="mx-auto bg-dark p-1 text-light" type="submit" name="Contactar" value="Contactar">
         </div>     
     </div>
 </section>
@@ -325,5 +268,9 @@
 <!--Fin Footer-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/inicioSes.js"></script>
+<script src="../js/bancoVirtual.js"></script>
+<script src="../js/carrito.js"></script>
+<script src="../js/baseDatos.js"></script>
 </body>
 </html>
