@@ -1,5 +1,5 @@
 document.getElementById('formularioRegistro').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+    event.preventDefault(); 
 
     // Recoge los valores de los campos del formulario
     const usuario = {
@@ -12,20 +12,16 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
         telefono: document.getElementById('telefono').value
     };
 
-    // Guarda los datos en localStorage con la clave 'usuarioLogeado'
     localStorage.setItem('usuarioLogeado', JSON.stringify(usuario));
 
-    // Recargar la página para aplicar los cambios y mostrar el mensaje de bienvenida
     location.reload();
 });
 
 document.getElementById('cerrarSesionLink').addEventListener('click', function(event) {
     event.preventDefault(); // Evita el comportamiento predeterminado del enlace
 
-    // Eliminar la información del usuario de localStorage
     localStorage.removeItem('usuarioLogeado');
 
-    // Recargar la página para aplicar los cambios y volver a mostrar el formulario
     location.reload();
 });
 
@@ -49,7 +45,6 @@ function checkUserStatus() {
         // Si no hay usuario logueado, muestra el formulario y el enlace de iniciar sesión
         document.getElementById('contenedorFormulario').style.display = 'block';
         document.getElementById('contenedorBienvenida').style.display = 'none';
-
         document.getElementById('iniciarSesionLink').style.display = 'block';
         document.getElementById('cerrarSesionLink').style.display = 'none';
     }

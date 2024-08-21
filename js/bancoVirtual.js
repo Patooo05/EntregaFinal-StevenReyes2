@@ -118,13 +118,13 @@ localStorage.setItem('bancoVirtual', JSON.stringify(bancoVirtual));
 document.getElementById('formCompra').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Obtener datos ingresados por el usuario
+    // Obtener datos ingresados  usuario
     const numeroTarjeta = document.getElementById('typeText').value.trim();
     const fechaVencimiento = document.getElementById('typeExp').value.trim();
     const cvv = document.getElementById('typeCvv').value.trim();
     const totalCompra = parseFloat(document.getElementById('total').innerText.replace('$', ''));
 
-    // Obtener datos del banco desde localStorage
+    // Obtener datos del banco localStorage
     const bancoVirtual = JSON.parse(localStorage.getItem('bancoVirtual'));
 
     // Buscar la tarjeta en el array
@@ -133,13 +133,12 @@ document.getElementById('formCompra').addEventListener('submit', function (e) {
         tarjeta.fechaVencimiento === fechaVencimiento &&
         tarjeta.cvv === cvv
     );
-
     const mensajeCompra = document.getElementById('mensajeCompra');
 
     // Verificar si la tarjeta fue encontrada y si tiene saldo suficiente
     if (tarjetaEncontrada) {
         if (tarjetaEncontrada.saldo >= totalCompra) {
-            // Mostrar alerta de confirmación
+           
             Swal.fire({
                 title: '¿Estás seguro?',
                 text: "¿Deseas confirmar la compra?",
@@ -156,16 +155,15 @@ document.getElementById('formCompra').addEventListener('submit', function (e) {
 
                     // Eliminar la sección de compra
                     const sectionCompra = document.querySelector('section.h-100.h-custom.py-5');
-                    sectionCompra.innerHTML = ''; // Vaciar el contenido de la sección
+                    sectionCompra.innerHTML = ''; 
 
-                    // Mostrar mensaje de agradecimiento con el nombre del usuario
+                   
                     const nombreUsuario = tarjetaEncontrada.nombre;
                     const mensajeGracias = document.createElement('h2');
                     mensajeGracias.classList.add('text-center', 'text-white');
                     mensajeGracias.textContent = `Gracias por tu compra, ${nombreUsuario}!`;
                     sectionCompra.appendChild(mensajeGracias);
 
-                    // Mostrar mensaje de éxito con SweetAlert
                     Swal.fire(
                         'Compra realizada',
                         'Tu compra ha sido exitosa.',

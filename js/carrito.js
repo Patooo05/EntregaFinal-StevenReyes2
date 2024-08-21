@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('carrito', JSON.stringify([]));
     }
     
-    // Carga el carrito desde localStorage
+    // Carga carrito desde localStorage
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     actualizarCarrito();
 });
@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const shippingCost = 20;
 
-// Inicializa el carrito en localStorage si no existe
+//  carrito en localStorage si no existe
 document.addEventListener('DOMContentLoaded', function() {
     if (!localStorage.getItem('carrito')) {
         localStorage.setItem('carrito', JSON.stringify([]));
     }
     
-    // Carga el carrito desde localStorage
+    
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     actualizarCarrito();
 });
@@ -94,15 +94,11 @@ function removeFromCart(index) {
 
 // Evento para cerrar sesión
 document.getElementById('cerrarSesionLink').addEventListener('click', function(event) {
-    event.preventDefault(); // Evita la navegación predeterminada del enlace
+    event.preventDefault(); 
 
-    // Eliminar el usuario de localStorage
+    
     localStorage.removeItem('usuarioLogeado');
-
-    // Limpiar el carrito de localStorage
     localStorage.removeItem('carrito');
-
-    // Redirigir al usuario a la página de inicio
     window.location.href = '../index.html';
 });
 

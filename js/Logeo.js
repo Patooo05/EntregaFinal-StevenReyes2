@@ -8,17 +8,24 @@ window.onload = function() {
 }
 
 function verificarSesion(redireccion) {
-    const usuarioLogeado = localStorage.getItem('usuarioLogeado');
+  const usuarioLogeado = localStorage.getItem('usuarioLogeado');
 
-    if (!usuarioLogeado) {
-      alert("Debes iniciar sesión para acceder a esta página.");
-      window.location.href = '../index.html';  // Cambia a la ruta de tu página de inicio de sesión
-    } else {
+  if (!usuarioLogeado) {
+      Swal.fire({
+          title: 'Acceso restringido',
+          text: 'Debes iniciar sesión para acceder a esta página.',
+          icon: 'warning',
+          confirmButtonText: 'OK'
+      }).then(() => {
+          // Redirigir a la página de inicio 
+          window.location.href = '../index.html'; 
+      });
+  } else {
       window.location.href = redireccion;
-    }
-
-    return false;
   }
+
+  return false;
+}
 
   document.getElementById('productos-link').addEventListener('click', function(event) {
     event.preventDefault();

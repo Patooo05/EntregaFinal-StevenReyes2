@@ -70,12 +70,12 @@
 
   const renderizarProductos = (arrayProductos) => {
     let contenedorProductos = document.getElementById("contenedorProductos");
-    contenedorProductos.innerHTML = '<div class="row"></div>'; // Añadir un contenedor con clase 'row'
+    contenedorProductos.innerHTML = '<div class="row"></div>'; 
     let row = contenedorProductos.querySelector('.row');
 
     arrayProductos.forEach(producto => {
         let cardProducto = document.createElement("div");
-        cardProducto.className = "col-md-4 col-sm-6"; // Añadir la clase de columna a cada producto
+        cardProducto.className = "col-md-4 col-sm-6"; 
         
         cardProducto.innerHTML =  `
             <div class="card mb-4">
