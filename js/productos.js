@@ -68,36 +68,31 @@
     }
   ];
 
-
-// Arreglar centrado 
-const renderizarProductos = (arrayProductos) => {
+  const renderizarProductos = (arrayProductos) => {
     let contenedorProductos = document.getElementById("contenedorProductos");
-    contenedorProductos.innerHTML = ""; 
+    contenedorProductos.innerHTML = '<div class="row"></div>'; // Añadir un contenedor con clase 'row'
+    let row = contenedorProductos.querySelector('.row');
 
-arrayProductos.forEach(producto => {
-    let cardProducto = document.createElement("div"); 
-    
-      cardProducto.innerHTML =  `
-             <div class="col-md-4 col-sm-6 border-solid mx-auto">
-                <div class="card mb-4 ">
-                    <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-                    <div class="card-body cardprod text-center">
-                        <h5 class="card-title">${producto.nombre}</h5>
-                        <p class="card-text text-light">${producto.descripcion}</p>
-                        <p class="card-text text-light precio-destacado">Precio: $${producto.precio}</p>
-                        <button class="btn bg-dark text-light btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto${producto.id}">Agregar al carrito</button>
-                    </div>
+    arrayProductos.forEach(producto => {
+        let cardProducto = document.createElement("div");
+        cardProducto.className = "col-md-4 col-sm-6"; // Añadir la clase de columna a cada producto
+        
+        cardProducto.innerHTML =  `
+            <div class="card mb-4">
+                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                <div class="card-body cardprod text-center">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    <p class="card-text text-light">${producto.descripcion}</p>
+                    <p class="card-text text-light precio-destacado">Precio: $${producto.precio}</p>
+                    <button class="btn bg-dark text-light btn-agregar" data-bs-toggle="modal" data-bs-target="#modalProducto${producto.id}">Agregar al carrito</button>
                 </div>
             </div>
         `; 
-        contenedorProductos.appendChild(cardProducto)
-});
-
+        row.appendChild(cardProducto);
+    });
 };
 
 renderizarProductos(productos);
-
-
 
 
 

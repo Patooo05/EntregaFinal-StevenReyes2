@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="sweetalert2.min.css">
   <link rel="icon" href="./img/icono-nwe03.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Macondo&display=swap" rel="stylesheet">
   <title>Burger One, ¡Saborea la delicia en cada bocado! </title>
@@ -22,59 +24,66 @@
   <header class="background">
     <nav class="navbar navbar-expand-lg bg__nav py-auto fixed-top mx-auto padingnav">
       <div class="container-fluid mx-auto">
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <img class="logo logo-mobile d-block d-lg-none" src="./img/icono-nwe03.png" alt="LOGO burger one">
-        <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
-          <div>
-            <img class="logo d-none d-lg-block" src="./img/icono-nwe03.png" alt="LOGO burger one">
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <img class="logo logo-mobile d-block d-lg-none" src="./img/icono-nwe03.png" alt="LOGO burger one">
+          <div class="collapse navbar-collapse nav__sombra py-1" id="navbarSupportedContent">
+              <div>
+                  <img class="logo d-none d-lg-block" src="./img/icono-nwe03.png" alt="LOGO burger one">
+              </div>
+              <!-- Enlaces principales centrados -->
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item text-center marginr">
+                      <a class="nav-link active colortxtnav text-light" href="./index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item text-center marginr">
+                      <a id="productos-link" class="nav-link active text-light" href="#">PRODUCTOS</a>
+                  </li>
+                  <li class="nav-item text-center marginr">
+                      <a id="novedades-link" class="nav-link active text-light" href="#">NOVEDADES</a>
+                  </li>
+                  <li class="nav-item text-center marginr">
+                      <a id="nosotros-link" class="nav-link active text-light" href="#">NOSOTROS</a>
+                  </li>
+              </ul>
+              <!-- Enlaces móviles (d-block d-lg-none) -->
+              <ul class="navbar-nav d-block d-lg-none ms-auto">
+                  <li class="nav-item text-center marginr">
+                      <a class="nav-link text-light arreglo-letras cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                  </li>
+                  <li class="nav-item text-center marginr">
+                      <a class="nav-link text-light arreglo-letras" href="./pages/registrarse.html" id="desktop-register-link">Registrarse</a>
+                  </li>
+                  <li class="nav-item text-center marginr">
+                      <a id="perfil-link" class="nav-link text-light" href="#">Perfil</a>
+                  </li>
+                  <li class="nav-item text-center marginr">
+                      <a id="carrito-link" class="nav-link text-light" href="#">Carrito</a>
+                  </li>
+              </ul>
+              <!-- Enlaces de escritorio (d-none d-lg-block) -->
+              <ul class="navbar-nav d-flex align-items-center ms-auto">
+                  <li>
+                      <a href="#" id="cerrarSesionLink" class="nav-link text-light arreglo-letras fs-6 cursorpointer" style="display: none;">Cerrar Sesión</a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block arreglo-letras">
+                      <a class="nav-link text-light arreglo-letras fs-6 cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
+                      <a class="nav-link text-light arreglo-letras fs-6" href="./pages/registrarse.html" id="desktop-register-link">Registrarse</a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
+                      <a id="perfil-link-lg" class="nav-link text-light" href="#"><img class="w-75" src="./img/icono-editar-perfil.png" alt="editar perfil"></a>
+                  </li>
+                  <li class="nav-item usuario-nav d-none d-lg-block">
+                      <a id="carrito-link-lg" class="nav-link text-light" href="#"><img class="w-75" src="./img/icono-carrito-nav.png" alt="carrito de compras"></a>
+                  </li>
+              </ul>
           </div>
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item text-center marginr">
-              <a class="nav-link active colortxtnav text-light" href="./index.html">INICIO</a>
-            </li>
-            <li class="nav-item text-center marginr">
-              <a class="nav-link active text-light" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
-            </li>
-            <li class="nav-item text-center marginr">
-              <a class="nav-link active text-light" href="./pages/novedades.html">NOVEDADES</a>
-            </li>
-            <li class="nav-item text-center marginr">
-              <a class="nav-link active text-light" href="./pages/nosotros.html">NOSOTROS</a>
-            </li>
-            <!--Elementos solo mobile-->
-            <li class="nav-item text-center d-block d-lg-none arreglo-letras marginr">
-              <a class="nav-link text-light arreglo-letras cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
-            </li>
-            <li class="nav-item text-center d-block d-lg-none marginr">
-              <a class="nav-link text-light arreglo-letras" href="./pages/registrarse.html">Registrarse</a>
-            </li>
-            <li class="nav-item text-center d-block d-lg-none marginr">
-              <a class="nav-link text-light" href="./pages/perfil.html">Perfil</a>
-            </li>
-            <li class="nav-item text-center d-block d-lg-none marginr">
-              <a class="nav-link text-light" href="./pages/carrito.html">Carrito</a>
-            </li>
-          </ul>
-          <!--Elementos mobile-->
-          <ul class="navbar-nav d-flex align-items-center justify-content-between cursorpointer arreglo-letras">
-            <li class="nav-item d-none d-lg-block arreglo-letras">
-              <a class="nav-link text-light arreglo-letras fs-6 cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
-            </li>
-            <li class="nav-item d-none d-lg-block">
-              <a class="nav-link text-light arreglo-letras fs-6" href="./pages/registrarse.html">Registrarse</a>
-            </li>
-            <li class="nav-item d-none d-lg-block">
-              <a class="nav-link text-light" href="./pages/perfil.html"><img class="w-75" src="./img/icono-editar-perfil.png" alt="editar perfil"></a>
-            </li>
-            <li class="nav-item usuario-nav d-none d-lg-block">
-              <a class="nav-link text-light" href="./pages/carrito.html"><img class="w-75" src="./img/icono-carrito-nav.png" alt="carrito de compras"></a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
+  </nav>
+  
 
     <!-- Modal -->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
@@ -101,7 +110,7 @@
         </form>
       </div>
       <div class="modal-footer mt-3 pt-3 border-top border-secondary">
-        <button type="button" class="btn btn-secondary" id="boton-iniciar-sesion">Iniciar Sesión</button>
+        <button type="button" class="btn btn-secondary" id="loginButton">Iniciar Sesión</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
@@ -397,7 +406,17 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="./js/inicioSession.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./js/inx.js"></script>
+
+
+<script src="./js/Logeo.js"></script>
+<script src="./js/inicioSes.js"></script>
+<script src="./js/bancoVirtual.js"></script>
+<script src="./js/carrito.js"></script>
+<script src="./js/productos.js"></script>
+
   <script src="./js/baseDatos.js"></script>
 </body>
 

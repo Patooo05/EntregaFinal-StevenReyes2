@@ -113,30 +113,72 @@ const bancoVirtual = [
 ];
 
 
-document.getElementById('formCompra').addEventListener('submit', function(evento) {
-    evento.preventDefault(); // Evitar el envío del formulario
+localStorage.setItem('bancoVirtual', JSON.stringify(bancoVirtual));
 
+document.getElementById('formCompra').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Obtener datos ingresados por el usuario
     const numeroTarjeta = document.getElementById('typeText').value.trim();
+    const fechaVencimiento = document.getElementById('typeExp').value.trim();
+    const cvv = document.getElementById('typeCvv').value.trim();
+    const totalCompra = parseFloat(document.getElementById('total').innerText.replace('$', ''));
 
-    // Obtener los datos del bancoVirtual desde localStorage
+    // Obtener datos del banco desde localStorage
     const bancoVirtual = JSON.parse(localStorage.getItem('bancoVirtual'));
 
-    // Verificar si el número de tarjeta ingresado está en bancoVirtual
-    const tarjetaValida = bancoVirtual.some(usuario => usuario.numeroTarjeta === numeroTarjeta);
+    // Buscar la tarjeta en el array
+    const tarjetaEncontrada = bancoVirtual.find(tarjeta => 
+        tarjeta.numeroTarjeta === numeroTarjeta &&
+        tarjeta.fechaVencimiento === fechaVencimiento &&
+        tarjeta.cvv === cvv
+    );
 
-    if (tarjetaValida) {
-        alert("La tarjeta es válida.");
+    const mensajeCompra = document.getElementById('mensajeCompra');
+
+    // Verificar si la tarjeta fue encontrada y si tiene saldo suficiente
+    if (tarjetaEncontrada) {
+        if (tarjetaEncontrada.saldo >= totalCompra) {
+            // Mostrar alerta de confirmación
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¿Deseas confirmar la compra?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, comprar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Efectuar la compra
+                    tarjetaEncontrada.saldo -= totalCompra;
+                    localStorage.setItem('bancoVirtual', JSON.stringify(bancoVirtual));
+
+                    // Eliminar la sección de compra
+                    const sectionCompra = document.querySelector('section.h-100.h-custom.py-5');
+                    sectionCompra.innerHTML = ''; // Vaciar el contenido de la sección
+
+                    // Mostrar mensaje de agradecimiento con el nombre del usuario
+                    const nombreUsuario = tarjetaEncontrada.nombre;
+                    const mensajeGracias = document.createElement('h2');
+                    mensajeGracias.classList.add('text-center', 'text-white');
+                    mensajeGracias.textContent = `Gracias por tu compra, ${nombreUsuario}!`;
+                    sectionCompra.appendChild(mensajeGracias);
+
+                    // Mostrar mensaje de éxito con SweetAlert
+                    Swal.fire(
+                        'Compra realizada',
+                        'Tu compra ha sido exitosa.',
+                        'success'
+                    );
+                }
+            });
+        } else {
+            mensajeCompra.textContent = 'Saldo insuficiente.';
+            mensajeCompra.classList.add('text-danger');
+        }
     } else {
-        alert("La tarjeta no es válida.");
+        mensajeCompra.textContent = 'Tarjeta no válida.';
+        mensajeCompra.classList.add('text-danger');
     }
-    
 });
-
-
-
-
-
-  
-
-
-  

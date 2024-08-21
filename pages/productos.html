@@ -42,12 +42,7 @@
                             <a class="nav-link active text-light" href="./nosotros.html">NOSOTROS</a>
                         </li>
                         <!-- Elementos solo mobile -->
-                        <li class="nav-item text-center d-block d-lg-none marginr">
-                            <a class="nav-link text-light arreglo-letras cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
-                        </li>
-                        <li class="nav-item text-center d-block d-lg-none marginr">
-                            <a class="nav-link text-light arreglo-letras" href="./registrarse.html">Registrarse</a>
-                        </li>
+                       
                         <li class="nav-item text-center d-block d-lg-none marginr">
                             <a class="nav-link text-light" href="./perfil.html">Perfil</a>
                         </li>
@@ -57,11 +52,14 @@
                     </ul>
                     <!-- Elementos -->
                     <ul class="navbar-nav d-flex align-items-center justify-content-between">
+                        <li>
+                            <a href="#" id="cerrarSesionLink" class="nav-link text-light arreglo-letras fs-6 cursorpointer" style="display: none;">Cerrar Sesión</a>
+                          </li>
                         <li class="nav-item d-none d-lg-block">
                             <a class="nav-link text-light arreglo-letras fs-6 cursorpointer" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item d-none d-lg-block">
-                            <a class="nav-link text-light arreglo-letras fs-6" href="./registrarse.html">Registrarse</a>
+                         
                         </li>
                         <li class="nav-item d-none d-lg-block">
                             <a class="nav-link text-light" href="./perfil.html"><img class="w-75" src="../img/icono-editar-perfil.png" alt="editar perfil"></a>
@@ -396,10 +394,13 @@
         </section>
         <p class="text-center font-weight-bold text-light m-3">&copy; 2024 Burger ONE. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="../js/carrito.js"></script>
     <script src="../js/productos.js"></script>
+    <script src="../js/Logeo.js"></script>
+    <script src="../js/inicioSes.js"></script>
     <script src="../js/bancoVirtual.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/baseDatos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

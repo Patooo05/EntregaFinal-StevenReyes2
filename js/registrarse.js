@@ -1,49 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('formularioRegistro').addEventListener('submit', function(event) {
-      event.preventDefault(); // Previene el envío del formulario
+document.getElementById('formularioRegistro').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
-      // Obtener los valores de los campos
-      const nombre = document.getElementById('nombre').value;
-      const apellido = document.getElementById('apellido').value;
-      const correo = document.getElementById('correo').value;
-      const contraseña = document.getElementById('contraseña').value;
-      const ciudad = document.getElementById('ciudad').value;
-      const direccion = document.getElementById('direccion').value;
-      const telefono = document.getElementById('telefono').value;
+    // Recoge los valores de los campos del formulario
+    const usuario = {
+        nombre: document.getElementById('nombre').value,
+        apellido: document.getElementById('apellido').value,
+        correo: document.getElementById('correo').value,
+        contraseña: document.getElementById('contraseña').value,
+        ciudad: document.getElementById('ciudad').value,
+        direccion: document.getElementById('direccion').value,
+        telefono: document.getElementById('telefono').value
+    };
 
-      // Verificar que los datos estén completos
-      if (nombre && apellido && correo && contraseña && ciudad && direccion && telefono) {
-          // Crear objeto usuario
-          const usuario = {
-              nombre: nombre,
-              apellido: apellido,
-              correo: correo,
-              contraseña: contraseña,
-              ciudad: ciudad,
-              direccion: direccion,
-              telefono: telefono
-          };
+    // Guarda los datos en localStorage con la clave 'usuarioLogeado'
+    localStorage.setItem('usuarioLogeado', JSON.stringify(usuario));
 
-          // Guardar el objeto usuario en localStorage
-          localStorage.setItem('usuario1', JSON.stringify(usuario));
-
-          // Mostrar mensaje de éxito
-          alert('Registro exitoso');
-          
-          // Mostrar datos en la consola para verificación
-          console.log('Datos guardados en localStorage:', JSON.parse(localStorage.getItem('usuario1')));
-
-          // Ocultar el contenedor del formulario y mostrar el mensaje de bienvenida
-          document.getElementById('btnRegristrar').style.display = 'none';
-          document.getElementById('contenedorFormulario').style.display = 'none';
-          document.getElementById('mensajeBienvenida').innerText = `Bienvenido, ${nombre}`;
-          document.getElementById('contenedorBienvenida').style.display = 'block';
-
-          // Debugging messages
-          console.log('Formulario oculto y mensaje de bienvenida mostrado.');
-      } else {
-          // Mostrar mensaje de error
-          alert('Por favor, complete todos los campos');
-      }
-  });
+    // Recargar la página para aplicar los cambios y mostrar el mensaje de bienvenida
+    location.reload();
 });
+
+document.getElementById('cerrarSesionLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+    // Eliminar la información del usuario de localStorage
+    localStorage.removeItem('usuarioLogeado');
+
+    // Recargar la página para aplicar los cambios y volver a mostrar el formulario
+    location.reload();
+});
+
+// Función para comprobar si el usuario está logueado
+function checkUserStatus() {
+    const usuarioLogeado = localStorage.getItem('usuarioLogeado');
+
+    if (usuarioLogeado) {
+        // Si el usuario está logueado, muestra el mensaje de bienvenida y el enlace de cerrar sesión
+        const usuario = JSON.parse(usuarioLogeado);
+
+        document.getElementById('contenedorFormulario').style.display = 'none';
+        document.getElementById('contenedorBienvenida').style.display = 'block';
+
+        const mensajeBienvenida = document.getElementById('mensajeBienvenida');
+        mensajeBienvenida.textContent = `¡Bienvenido, ${usuario.nombre}!`;
+
+        document.getElementById('iniciarSesionLink').style.display = 'none';
+        document.getElementById('cerrarSesionLink').style.display = 'block';
+    } else {
+        // Si no hay usuario logueado, muestra el formulario y el enlace de iniciar sesión
+        document.getElementById('contenedorFormulario').style.display = 'block';
+        document.getElementById('contenedorBienvenida').style.display = 'none';
+
+        document.getElementById('iniciarSesionLink').style.display = 'block';
+        document.getElementById('cerrarSesionLink').style.display = 'none';
+    }
+}
+
+// Ejecutar la función cuando la página se carga
+document.addEventListener('DOMContentLoaded', checkUserStatus);
